@@ -1,9 +1,8 @@
 'use client'
 
 import { celebrate } from '@/lib/confetti'
-import { useActionState, useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import styles from './QuoteForm.module.css'
-import { submitQuote } from '@/app/actions/quote'
 import { AREAS, PACKAGE_OPTIONS, PROPERTY_TYPES, type QuoteField, type QuoteState } from '@/lib/quote-options'
 import { trackEvent } from '@/lib/analytics/track'
 import type { FormCopy } from '@/content/types'
@@ -12,17 +11,77 @@ interface Props {
   copy: Omit<FormCopy, 'privacyNote'>
   areaLabels: Record<(typeof AREAS)[number], string>
   privacyNote: React.ReactNode
+  /** WhatsApp number (E.164). The enquiry is sent as a prefilled WhatsApp message — there is no email path. */
+  whatsapp?: string | null
 }
 
 const initial: QuoteState = { status: 'idle' }
 
-export function QuoteForm({ copy, areaLabels, privacyNote }: Props) {
-  const [state, action, pending] = useActionState(submitQuote, initial)
+export function QuoteForm({ copy, areaLabels, privacyNote, whatsapp }: Props) {
+  const state = initial
+  const pending = false
+  const [unavailable, setUnavailable] = useState(false)
   const packageRef = useRef<HTMLSelectElement>(null)
   const submittedPackage = useRef<string | undefined>(undefined)
   const [startedAt] = useState(() => Date.now())
   const successRef = useRef<HTMLDivElement>(null)
   const errorRef = useRef<HTMLDivElement>(null)
+  const [waErrors, setWaErrors] = useState<Partial<Record<QuoteField, 'required' | 'phone' | 'email'>>>({})
+  const [waLink, setWaLink] = useState<string | null>(null)
+  const waSuccessRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!waLink) return
+    waSuccessRef.current?.focus()
+    const r = waSuccessRef.current?.getBoundingClientRect()
+    if (r) celebrate(r.left + r.width / 2, Math.min(r.top + 40, innerHeight * 0.7))
+  }, [waLink])
+
+  /** WhatsApp mode: validate in the browser, then open WhatsApp with the enquiry written out. */
+  const sendToWhatsApp = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    if (!whatsapp) return setUnavailable(true)
+    const fd = new FormData(e.currentTarget)
+    const val = (k: string) => String(fd.get(k) ?? '').trim()
+    if (val('company')) return setWaLink('#') // honeypot: pretend success, send nothing
+    const errs: typeof waErrors = {}
+    if (!val('name')) errs.name = 'required'
+    if (!val('phone')) errs.phone = 'required'
+    else if (val('phone').replace(/[^\d]/g, '').length < 7) errs.phone = 'phone'
+    if (val('email') && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val('email'))) errs.email = 'email'
+    if (!val('area')) errs.area = 'required'
+    if (!val('propertyType')) errs.propertyType = 'required'
+    setWaErrors(errs)
+    if (Object.keys(errs).length) {
+      requestAnimationFrame(() => document.querySelector<HTMLElement>('[aria-invalid="true"], input[name="area"]:not(:checked)')?.focus())
+      return
+    }
+    const w = copy.whatsapp
+    const L = w.labels
+    const area = val('area') as keyof typeof areaLabels
+    const pt = val('propertyType') as keyof typeof copy.propertyTypes
+    const pkg = val('package') as keyof typeof copy.packageOptions
+    const lines = [
+      w.greeting,
+      '',
+      `${L.name}: ${val('name')}`,
+      `${L.phone}: ${val('phone')}`,
+      val('email') ? `${L.email}: ${val('email')}` : null,
+      `${L.area}: ${areaLabels[area] ?? area}`,
+      `${L.propertyType}: ${copy.propertyTypes[pt] ?? pt}`,
+      pkg ? `${L.package}: ${copy.packageOptions[pkg] ?? pkg}` : null,
+      val('date') ? `${L.date}: ${val('date')}` : null,
+      val('message') ? `${L.notes}: ${val('message')}` : null,
+    ].filter((l) => l !== null)
+    const url = `https://wa.me/${String(whatsapp).replace(/[^\d]/g, '')}?text=${encodeURIComponent(lines.join('\n'))}`
+    trackEvent('generate_lead', pkg || undefined)
+    trackEvent('whatsapp_click', 'quote_form')
+    // (window.open with 'noopener' always returns null, so detach the opener manually)
+    const win = window.open(url, '_blank')
+    if (win) win.opener = null
+    else window.location.href = url
+    setWaLink(url)
+  }
 
   // Pre-select the package chosen on a package card (?package=silver). Read after mount so the
   // form itself stays server-rendered (no layout shift) and the page stays static.
@@ -45,6 +104,22 @@ export function QuoteForm({ copy, areaLabels, privacyNote }: Props) {
     }
   }, [state])
 
+  if (waLink) {
+    return (
+      <div ref={waSuccessRef} tabIndex={-1} className={styles.success} role="status">
+        <h3>{copy.whatsapp.successHeading}</h3>
+        <p>{copy.whatsapp.successBody}</p>
+        {waLink !== '#' ? (
+          <p style={{ marginTop: 'var(--s-4)' }}>
+            <a href={waLink} className="btn btn-gold" target="_blank" rel="noopener">
+              {copy.whatsapp.open}
+            </a>
+          </p>
+        ) : null}
+      </div>
+    )
+  }
+
   if (state.status === 'success') {
     return (
       <div ref={successRef} tabIndex={-1} className={styles.success} role="status">
@@ -55,7 +130,7 @@ export function QuoteForm({ copy, areaLabels, privacyNote }: Props) {
   }
 
   const v = state.values ?? {}
-  const err = (f: QuoteField) => state.fieldErrors?.[f]
+  const err = (f: QuoteField) => waErrors[f]
   const describe = (f: QuoteField, hint?: boolean) => [hint ? `${f}-hint` : null, err(f) ? `${f}-error` : null].filter(Boolean).join(' ') || undefined
   const errorText = (f: QuoteField) =>
     err(f) ? (
@@ -65,7 +140,12 @@ export function QuoteForm({ copy, areaLabels, privacyNote }: Props) {
     ) : null
 
   return (
-    <form action={action} onSubmit={() => (submittedPackage.current = packageRef.current?.value)} className={styles.form} noValidate aria-describedby={state.error ? 'form-error' : undefined}>
+    <form onSubmit={sendToWhatsApp} className={styles.form} noValidate aria-describedby={state.error || unavailable ? 'form-error' : undefined}>
+      {unavailable ? (
+        <div id="form-error" className={styles.alert} role="alert">
+          {copy.errors.notConfigured}
+        </div>
+      ) : null}
       {state.error ? (
         <div ref={errorRef} id="form-error" tabIndex={-1} className={styles.alert} role="alert">
           {copy.errors[state.error]}
@@ -170,7 +250,7 @@ export function QuoteForm({ copy, areaLabels, privacyNote }: Props) {
       <input type="hidden" name="startedAt" value={startedAt} />
 
       <button type="submit" className="btn btn-primary btn-block" disabled={pending} aria-disabled={pending}>
-        {pending ? copy.sending : copy.submit}
+        {copy.whatsapp.submit}
       </button>
       <p className={styles.privacy}>{privacyNote}</p>
     </form>

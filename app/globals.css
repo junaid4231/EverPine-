@@ -748,3 +748,12 @@ html:not(.js) .photo-word-text {
 }
 .stream em .stream-w { font-style: italic; }
 @media (prefers-reduced-motion: reduce) { .stream-w { opacity: 1; } }
+
+/* Button groups on phones: the primary action runs full width; any further
+   actions share one tidy row beneath it. Never a ragged wrap. */
+@media (max-width: 47.99rem) {
+  .cta-group { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.625rem; }
+  .cta-group > * { grid-column: 1 / -1; width: 100%; }
+  .cta-group > :first-child:nth-last-child(n + 3) ~ * { grid-column: auto; }
+  .cta-group > .btn { padding-inline: 1rem; }
+}

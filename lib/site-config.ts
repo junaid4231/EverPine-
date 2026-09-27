@@ -78,9 +78,12 @@ export const siteConfig = {
    * While null, every call / WhatsApp control on the site stays hidden and
    * the "Get a quote" form becomes the primary action.
    */
-  phone: null as string | null, // TODO: confirm with client
+  // Set in Vercel → Settings → Environment Variables (no code change needed):
+  //   NEXT_PUBLIC_WHATSAPP_NUMBER = +9715XXXXXXXX   (also used for "Call" unless a separate phone is set)
+  //   NEXT_PUBLIC_PHONE_NUMBER    = +9714XXXXXXX    (optional: a different number for calls)
+  phone: (process.env.NEXT_PUBLIC_PHONE_NUMBER || process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || null) as string | null,
   /** WhatsApp number in E.164. Defaults to the phone number when null. */
-  whatsapp: null as string | null, // TODO: confirm with client
+  whatsapp: (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || null) as string | null,
 
   /** info@<domain>. Hidden until NEXT_PUBLIC_SITE_URL is the real domain. */
   publicEmail: derivePublicEmail(siteUrl),

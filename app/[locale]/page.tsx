@@ -67,7 +67,7 @@ export default async function Home({ params }: Props) {
               </span>{' '}
               <span className={s.l3}>{h.hero.h1c}</span>
             </h1>
-            <div className={s.ctas}>
+            <div className={`${s.ctas} cta-group`}>
               {wa ? (
                 <a href={wa} className="btn btn-primary" data-track="whatsapp_click" data-track-label="hero">
                   <WhatsAppIcon />
@@ -207,7 +207,7 @@ export default async function Home({ params }: Props) {
           </div>
           <figure className={s.gulfA}>
             <div className={`${s.f} arch`} data-reveal="arch">
-              <Img id={h.gulf.images[0]!} dict={dict} fill sizes="(min-width: 64rem) 30vw, 90vw" />
+              <Img id={h.gulf.images[0]!} dict={dict} fill sizes="(min-width: 64rem) 30vw, 56vw" />
             </div>
             <figcaption className="plate">
               <b>{dict.ui.plate} 02</b>
@@ -216,7 +216,7 @@ export default async function Home({ params }: Props) {
           </figure>
           <figure className={s.gulfB}>
             <div className={s.f} data-reveal style={{ ['--d' as string]: 3 }}>
-              <Img id={h.gulf.images[1]!} dict={dict} fill sizes="(min-width: 64rem) 22vw, 62vw" />
+              <Img id={h.gulf.images[1]!} dict={dict} fill sizes="(min-width: 64rem) 22vw, 42vw" />
             </div>
             <figcaption className="plate">
               <b>{dict.ui.plate} 03</b>

@@ -656,7 +656,7 @@ export const privacy = {
       body: ['We share personal data only with service providers who help us run the website and respond to you:'],
       list: [
         '**Vercel** — website hosting and privacy-friendly analytics;',
-        '**Resend** — delivery of form submissions to our inbox by email;',
+        '**WhatsApp (Meta)** — enquiries you choose to send us on WhatsApp, including from our quote form, are delivered through WhatsApp under its own privacy policy;',
         '**Google** — only if Google Analytics is enabled and you accept it.',
       ],
     },

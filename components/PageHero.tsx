@@ -41,13 +41,13 @@ export function PageHero({ dict, locale, trail, eyebrow, h1, intro, image, image
           <p className={`lede ${styles.intro}`}>
             <Rich text={intro} locale={locale} />
           </p>
-          {ctas ? <div className={styles.ctas}>{ctas}</div> : null}
+          {ctas ? <div className={`${styles.ctas} cta-group`}>{ctas}</div> : null}
           {note ? <p className={`small muted ${styles.note}`}>{note}</p> : null}
         </div>
         {image ? (
           <figure className={styles.figure}>
             <div className={`${styles.frame} ${styles.lights}`}>
-              <Img id={image} dict={dict} sizes="(min-width: 64rem) 32vw, 64vw" priority quality={60} fill position={imagePosition} />
+              <Img id={image} dict={dict} sizes="(min-width: 64rem) 32vw, 100vw" priority quality={75} fill position={imagePosition} />
             </div>
             <span className={styles.line} aria-hidden="true" />
             <figcaption className="plate">

@@ -116,7 +116,7 @@ export function Collection({ dict, locale, variant }: Props) {
                     ))}
                   </ul>
 
-                  <div className={styles.ctas}>
+                  <div className={`${styles.ctas} cta-group`}>
                     {wa ? (
                       <a href={wa} className="btn btn-primary" data-track="whatsapp_click" data-track-label={`package_${pkg.id}`}>
                         <WhatsAppIcon />

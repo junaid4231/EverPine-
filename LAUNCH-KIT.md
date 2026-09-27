@@ -294,7 +294,7 @@ These are realistic opportunities for a new UAE décor business, in order of val
 - [ ] www / non-www / `*.vercel.app` redirect to the primary domain (Vercel → Domains)
 - [ ] Phone and WhatsApp number set in `lib/site-config.ts`; buttons appear site-wide
 - [ ] `info@[DOMAIN]` mailbox exists and is monitored
-- [ ] Resend domain verified; test the quote form end to end, and confirm the email arrives and reply-to works
+- [ ] `NEXT_PUBLIC_WHATSAPP_NUMBER` set; test a WhatsApp button, a package button and the quote form end to end on a phone
 - [ ] Privacy policy reviewed; `legalReviewed: true`
 - [ ] Search Console verified and sitemap submitted; Bing imported
 - [ ] Rich Results Test run on `/`, `/packages`, `/faq`, one service page and one guide

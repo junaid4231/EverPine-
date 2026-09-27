@@ -35,3 +35,8 @@
   .count5 .plate:nth-child(4) { grid-column: 2 / span 3; margin-top: var(--s-5); }
   .count5 .plate:nth-child(5) { grid-column: 6 / span 5; margin-top: calc(var(--s-7) * -1); }
 }
+
+/* Phones: photographs between text stay a comfortable size — never a whole screen */
+@media (max-width: 47.99rem) {
+  .frame, .plate:nth-child(n) .frame { aspect-ratio: 1 / 0.92; }
+}

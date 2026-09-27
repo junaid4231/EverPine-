@@ -86,3 +86,32 @@
   /* phones: keep only the far-edge ornament so headlines stay clear */
   .ornaments :global(.orn:nth-child(n + 3)) { display: none; }
 }
+
+/* Phones & small tablets: the photograph runs edge to edge beneath the breadcrumb
+   and fades into the night, with the headline rising out of the fade —
+   the same language as the home hero, a little shorter. */
+@media (max-width: 63.99rem) {
+  .hero:not(.textOnly) { padding-top: var(--s-3); }
+  .hero:not(.textOnly) .grid { gap: var(--s-3); }
+  .figure {
+    width: auto;
+    max-width: none;
+    margin-inline: calc(var(--gutter) * -1);
+    padding-top: 0;
+  }
+  .frame {
+    aspect-ratio: auto;
+    height: clamp(16rem, 46svh, 28rem);
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .frame::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 45%, rgb(12 16 24 / 0.75) 78%, var(--midnight) 100%);
+    pointer-events: none;
+  }
+  .line { display: none; }
+  .hero:not(.textOnly) .text { position: relative; z-index: 2; margin-top: -4.5rem; }
+}

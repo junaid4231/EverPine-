@@ -3,7 +3,7 @@ import { load } from '@/lib/locale'
 import { absoluteUrl, pageMetadata } from '@/lib/seo'
 import { BUSINESS_ID, breadcrumbNode, graph } from '@/lib/schema'
 import { localePath } from '@/lib/i18n'
-import { hasWhatsApp } from '@/lib/site-config'
+import { hasWhatsApp, whatsappNumber } from '@/lib/site-config'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { ContactButtons } from '@/components/ContactButtons'
 import { QuoteForm } from '@/components/QuoteForm'
@@ -43,7 +43,7 @@ export default async function Contact({ params }: Props) {
           <p className="lede" style={{ marginTop: 'var(--s-4)' }}>
             {hasWhatsApp ? c.intro : c.introFormOnly}
           </p>
-          <div className={s.buttons}>
+          <div className={`${s.buttons} cta-group`}>
             <ContactButtons dict={dict} locale={locale} placement="contact" withQuote={false} />
           </div>
         </div>
@@ -53,7 +53,7 @@ export default async function Contact({ params }: Props) {
           <p className="muted" style={{ marginTop: 'var(--s-3)', marginBottom: 'var(--s-6)' }}>
             {dict.form.intro}
           </p>
-          <QuoteForm copy={formCopy} areaLabels={dict.areas} privacyNote={<Rich text={privacyNote} locale={locale} />} />
+          <QuoteForm copy={formCopy} areaLabels={dict.areas} whatsapp={whatsappNumber} privacyNote={<Rich text={privacyNote} locale={locale} />} />
         </div>
 
         <div className={s.aside}>

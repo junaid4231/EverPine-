@@ -234,6 +234,14 @@ export interface FormCopy {
   sending: string
   privacyNote: RichText
   success: { heading: string; body: string }
+  whatsapp: {
+    submit: string
+    successHeading: string
+    successBody: string
+    open: string
+    greeting: string
+    labels: { name: string; phone: string; email: string; area: string; propertyType: string; package: string; date: string; notes: string }
+  }
   errors: {
     generic: string
     rateLimited: string

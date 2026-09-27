@@ -12,7 +12,7 @@ Everything the site currently assumes or leaves as a placeholder. Items marked *
 
 | # | Item | Current state | Where |
 |---|---|---|---|
-| 1 | **Phone / WhatsApp number** | `null`, so every call and WhatsApp button is hidden and the quote form is the main CTA | `lib/site-config.ts` → `phone` (E.164, e.g. `+9715XXXXXXXX`), `whatsapp` if different |
+| 1 | **WhatsApp number** | Not set — WhatsApp buttons are hidden and the quote form falls back to email | Vercel env `NEXT_PUBLIC_WHATSAPP_NUMBER` (e.g. `+9715XXXXXXXX`). Once set, every WhatsApp button appears and the quote form sends the enquiry as a prefilled WhatsApp message. Optional `NEXT_PUBLIC_PHONE_NUMBER` for a different call number |
 | 2 | **Domain** | Placeholder; the production build refuses to run without it | Vercel env `NEXT_PUBLIC_SITE_URL` |
 | 3 | **info@[domain] mailbox exists and is monitored** | Email is shown automatically once the domain is set | Email host |
 | 4 | **Resend account + verified sending domain** | The form works but shows "temporarily unavailable" in production until this is set | Vercel env `RESEND_API_KEY`, `QUOTE_FROM_EMAIL` |

@@ -26,7 +26,7 @@ export function CtaBand({ dict, locale, heading, message, placement }: { dict: D
           </div>
           <div className={styles.side}>
             <p className="muted">{season.line}</p>
-            <div className={styles.ctas} style={{ marginTop: 'var(--s-5)' }}>
+            <div className={`${styles.ctas} cta-group`} style={{ marginTop: 'var(--s-5)' }}>
               <ContactButtons dict={dict} locale={locale} placement={placement} message={message} compact />
             </div>
           </div>

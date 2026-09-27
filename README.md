@@ -2,7 +2,7 @@
 
 Production website for **Everpine Events**, a Christmas décor supply & installation service in Dubai and Sharjah.
 
-- **Stack:** Next.js 16 (App Router, Turbopack) · React 19 · TypeScript (strict) · CSS Modules + design tokens · zod (server only) · Resend · Vercel Analytics
+- **Stack:** Next.js 16 (App Router, Turbopack) · React 19 · TypeScript (strict) · CSS Modules + design tokens · WhatsApp enquiries (no email service) · Vercel Analytics
 - **Rendering:** every page is statically generated at build time. The only server code is the quote-form server action, the 404 catch-all and a small `proxy.ts` that serves English without a `/en` prefix.
 - **Content:** all copy lives in typed files under `content/en/`, and all business facts live in `lib/site-config.ts`. No CMS: for ~20 pages edited a few times a year, typed files are faster, safer and free.
 
@@ -27,9 +27,8 @@ Requires Node 20.9+.
 | Variable | Required | Example / notes |
 |---|---|---|
 | `NEXT_PUBLIC_SITE_URL` | **Yes** | `https://www.everpineevents.ae`, the canonical domain with no trailing slash. **The production build fails on purpose if this is missing or a placeholder**, so canonicals can never point at localhost. |
-| `RESEND_API_KEY` | Yes (for the form) | From resend.com → API Keys |
-| `QUOTE_FROM_EMAIL` | Yes (for the form) | `Everpine Website <quotes@everpineevents.ae>`. The domain must be verified in Resend. |
-| `QUOTE_TO_EMAIL` | Optional | Private inbox for enquiries. It defaults to the client's private address in server code, which is never shown on the site. |
+| `NEXT_PUBLIC_WHATSAPP_NUMBER` | Yes (for enquiries) | e.g. `+971501234567`. Turns on all WhatsApp buttons; the quote form sends a prefilled WhatsApp message. |
+| `NEXT_PUBLIC_PHONE_NUMBER` | Optional | A different number for "Call" buttons. |
 | `GOOGLE_SITE_VERIFICATION` | Optional | Search Console HTML-tag token (content value only) |
 | `NEXT_PUBLIC_GA_ID` | Optional | `G-XXXXXXX`. When set, a consent banner appears and GA4 loads only after acceptance. |
 
@@ -72,7 +71,6 @@ Arabic pages will live at `/ar/...` with `dir="rtl"`.
 
 ```
 app/[locale]/…          pages (home, packages, services, cities, gallery, guides, contact, …)
-app/actions/quote.ts    quote-form server action (validation, honeypot, timing check, rate limit, Resend)
 app/og/[locale]/[key]   build-time 1200×630 social images
 app/sitemap.ts · robots.ts · manifest.ts · icon.svg · apple-icon.png
 components/             UI (Collection, ServicesIndex, Plates, PageHero, QuoteForm, TreeCalculator, …)

@@ -147,3 +147,33 @@
 .price .gift-tag strong { font-size: var(--step-3); }
 .ribbon { margin: calc(var(--s-8) * -1) 0 var(--s-7) !important; }
 @media (min-width: 64rem) { .ribbon { margin-top: calc(var(--s-9) * -1) !important; } }
+
+/* ───────── Phones: each package is one compact, self-contained card ───────── */
+@media (max-width: 47.99rem) {
+  .head { margin-bottom: var(--s-5); }
+  .list { border-top: 0; display: grid; gap: var(--s-5); }
+  .item {
+    gap: 0;
+    padding: 8px 8px var(--s-5);
+    border: 1px solid rgb(212 176 106 / 0.22);
+    border-radius: 999px 999px 14px 14px;
+    background: linear-gradient(180deg, rgb(245 239 228 / 0.035), rgb(245 239 228 / 0.01));
+  }
+  .item:nth-child(3) { border-color: rgb(212 176 106 / 0.6); box-shadow: 0 0 60px -30px rgb(212 176 106 / 0.5); }
+  .frame { aspect-ratio: 1 / 0.82; }
+  .figure :global(.plate) { display: none; }
+  .item > div:not(.scale) { padding: 0 var(--s-3); }
+  .titleRow { margin-top: var(--s-4); gap: var(--s-3); }
+  .name { font-size: 2.25rem; }
+  .numeral { font-size: 1.5rem; }
+  .tagline { font-size: var(--step-0); margin-top: 0.25rem; }
+  .meta { grid-template-columns: 1fr 5.5rem; gap: var(--s-3); margin-top: var(--s-3); align-items: center; }
+  .price { margin-top: 0; }
+  .priceNote { font-size: 0.75rem; margin-top: 0.4rem; }
+  .price :global(.gift-tag strong) { font-size: 1.55rem; }
+  .summary { margin-top: var(--s-3); font-size: var(--step--1); line-height: 1.6; color: rgb(243 235 221 / 0.85); }
+  .ideal { margin-top: var(--s-2); font-size: 0.8125rem; }
+  .includesHead { margin-top: var(--s-4); }
+  .includes li { padding-block: 0.35rem; font-size: 0.8125rem; }
+  .ctas { margin-top: var(--s-4); }
+}

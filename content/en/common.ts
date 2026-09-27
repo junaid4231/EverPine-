@@ -195,6 +195,14 @@ export const common: Common = {
       heading: 'Thank you — your enquiry is with us.',
       body: 'We’ll be in touch to confirm the details and your quote.',
     },
+    whatsapp: {
+      submit: 'Send on WhatsApp',
+      successHeading: 'Almost there — just tap Send in WhatsApp.',
+      successBody: 'WhatsApp has opened with your enquiry already written. Send it and we’ll reply to confirm the details and your quote.',
+      open: 'Open WhatsApp again',
+      greeting: 'Hello Everpine, I’d like a quote for Christmas décor.',
+      labels: { name: 'Name', phone: 'Phone', email: 'Email', area: 'Area', propertyType: 'Property', package: 'Package', date: 'Preferred date', notes: 'Notes' },
+    },
     errors: {
       generic: 'Something went wrong and your enquiry wasn’t sent. Please try again in a moment.',
       rateLimited: 'You’ve sent several enquiries in a short time. Please wait a few minutes and try again.',
