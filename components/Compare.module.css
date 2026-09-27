@@ -1,0 +1,10 @@
+.wrap { overflow-x: auto; margin-inline: calc(var(--gutter) * -1); padding-inline: var(--gutter); }
+.table { width: 100%; min-width: 22rem; font-size: var(--step--1); }
+.table caption { text-align: left; caption-side: top; padding-bottom: var(--s-4); color: var(--muted); }
+.table th, .table td { padding: var(--s-3) var(--s-2); border-bottom: 1px solid var(--rule); text-align: center; vertical-align: middle; }
+.table th[scope='row'] { text-align: left; font-weight: 400; padding-left: 0; }
+.table thead th { font-family: var(--font-serif); font-size: var(--step-2); font-weight: 300; }
+.table thead th span { display: block; font-family: var(--font-ui); font-size: var(--step--2); color: var(--muted); letter-spacing: 0.04em; }
+.yes { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 8px rgb(212 176 106 / 0.6); }
+.no { color: var(--muted); }
+.price td { font-weight: 500; font-variant-numeric: tabular-nums; }

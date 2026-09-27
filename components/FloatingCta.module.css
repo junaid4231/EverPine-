@@ -1,0 +1,41 @@
+.wrap .float {
+  transition: opacity 0.3s var(--ease-out), transform 0.3s var(--ease-out), visibility 0.3s;
+}
+.wrap[data-visible='false'] .float {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+}
+.float {
+  position: fixed;
+  z-index: 30;
+  inset-inline: var(--gutter);
+  bottom: calc(0.75rem + env(safe-area-inset-bottom));
+  display: flex;
+  gap: var(--s-2);
+  padding: 0.375rem;
+  border-radius: 999px;
+  background: rgb(10 14 22 / 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px -10px rgb(10 14 22 / 0.5);
+  --focus: var(--gold-soft);
+}
+.float a {
+  flex: 1;
+  min-height: 2.875rem;
+  border-radius: 999px;
+  font-size: var(--step--1);
+  padding-inline: 1rem;
+}
+.secondary {
+  color: var(--ivory);
+  border-color: transparent !important;
+  background: transparent;
+}
+@media (min-width: 64rem) {
+  .float { display: none; }
+}
+
+/* The contact page has its own form and buttons. */
+:global(body:has(#quote)) .float { display: none; }

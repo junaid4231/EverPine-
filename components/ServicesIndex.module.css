@@ -1,0 +1,190 @@
+/* ───────── Services: an advent calendar of photo doors ─────────
+   Mobile first — 2 columns; first & last services span the row.
+   ≥64rem — 4 columns: a 2×2 feature door and three wide doors. */
+.calendar {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+.tile { position: relative; min-width: 0; }
+.tile[data-wide-m] { grid-column: span 2; }
+
+.link {
+  position: relative;
+  display: block;
+  height: 100%;
+  aspect-ratio: 4 / 5.2;
+  overflow: hidden;
+  isolation: isolate;
+  color: var(--ivory);
+  text-decoration: none;
+  background: var(--night-2);
+  border-radius: 999px 999px 6px 6px;
+  box-shadow: 0 0 0 1px rgb(212 176 106 / 0.28), 0 24px 44px -26px rgb(0 0 0 / 0.9);
+  perspective: 900px;
+  -webkit-tap-highlight-color: transparent;
+}
+.tile[data-wide-m] .link { aspect-ratio: 16 / 10; border-radius: 6px; }
+
+/* Inner gold hairline — the door frame */
+.link::after {
+  content: '';
+  position: absolute;
+  inset: 7px;
+  z-index: 3;
+  border: 1px solid rgb(232 208 150 / 0.4);
+  border-radius: inherit;
+  pointer-events: none;
+  transition: inset 0.5s var(--ease-out), border-color 0.4s;
+}
+.link:hover::after, .link:focus-visible::after { inset: 11px; border-color: rgb(232 208 150 / 0.75); }
+
+.media { position: absolute; inset: 0; z-index: 0; }
+.media img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.4s var(--ease-out), filter 0.6s; filter: saturate(1.02) brightness(0.92); }
+.link:hover .media img, .link:focus-visible .media img { transform: scale(1.06); filter: saturate(1.1) brightness(1); }
+/* Legibility veil */
+.media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgb(9 11 17 / 0.92) 0%, rgb(9 11 17 / 0.55) 30%, transparent 58%);
+}
+
+/* Number — the advent "day", in gold italic */
+.num {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  font-family: var(--font-serif-italic);
+  font-style: italic;
+  font-size: clamp(2.25rem, 1.6rem + 2.6vw, 3.5rem);
+  line-height: 1;
+  color: var(--gold-soft);
+  text-shadow: 0 2px 14px rgb(0 0 0 / 0.7);
+  padding: 0.35em 0.55em;
+  background: radial-gradient(closest-side, rgb(9 11 17 / 0.55), transparent);
+  pointer-events: none;
+  transition: top 0.9s var(--ease-out), left 0.9s var(--ease-out), translate 0.9s var(--ease-out), font-size 0.9s var(--ease-out);
+}
+
+.body {
+  position: absolute;
+  z-index: 4;
+  inset: auto 0 0 0;
+  padding: 0 var(--s-4) var(--s-4);
+}
+.name {
+  display: block;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(1.2rem, 1rem + 0.9vw, 1.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+.line { display: none; margin-top: 0.4rem; font-size: var(--step--1); line-height: 1.45; color: rgb(246 239 226 / 0.78); max-width: 34ch; }
+.tile[data-wide-m] .line { display: block; }
+.tile[data-wide-m] .name { font-size: clamp(1.6rem, 1.2rem + 1.8vw, 2.4rem); }
+
+.go {
+  position: absolute;
+  z-index: 4;
+  right: var(--s-4);
+  bottom: var(--s-4);
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  color: var(--night);
+  background: var(--gold);
+  box-shadow: 0 0 0 4px rgb(212 176 106 / 0.18);
+  transition: transform 0.4s var(--ease-out);
+}
+.link:hover .go, .link:focus-visible .go { transform: translateX(3px); }
+.tile:not([data-wide-m]) .go { display: none; }
+
+/* Door leaves: night panels with the mashrabiya lattice and a gold knob */
+.leaves { position: absolute; inset: 0; z-index: 2; display: none; pointer-events: none; }
+.leaf {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background-color: #141821;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='42' viewBox='0 0 56 84'%3E%3Cg fill='none' stroke='%23d4b06a' stroke-opacity='.35' stroke-width='1.2'%3E%3Cpath d='M28 0C28 14 0 22 0 42S28 70 28 84M28 0c0 14 28 22 28 42S28 70 28 84'/%3E%3C/g%3E%3C/svg%3E");
+  backface-visibility: hidden;
+}
+.leaf:first-child { left: 0; transform-origin: left center; box-shadow: inset -1px 0 0 rgb(232 208 150 / 0.55); }
+.leaf:last-child { right: 0; transform-origin: right center; box-shadow: inset 1px 0 0 rgb(232 208 150 / 0.55); }
+.leaf::after {
+  content: '';
+  position: absolute;
+  top: 58%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #f6e2a8, #b8903f 70%);
+  box-shadow: 0 0 10px rgb(232 208 150 / 0.7);
+}
+.leaf:first-child::after { right: 8px; }
+.leaf:last-child::after { left: 8px; }
+
+@media (prefers-reduced-motion: no-preference) {
+  :global(.js) .leaves { display: block; }
+  .leaf {
+    transition: transform 1.3s cubic-bezier(0.6, 0, 0.2, 1), opacity 0.5s ease;
+    transition-delay: calc(0.35s + var(--d, 0) * 0.14s), calc(1.25s + var(--d, 0) * 0.14s);
+  }
+  :global(.js) .tile:global(.is-in) .leaf:first-child { transform: rotateY(-108deg); opacity: 0; }
+  :global(.js) .tile:global(.is-in) .leaf:last-child { transform: rotateY(108deg); opacity: 0; }
+  /* The number moves from the door to the top corner once opened */
+  :global(.js) .tile:global(.is-in) .num { transition-delay: calc(0.6s + var(--d, 0) * 0.14s); }
+}
+
+/* Opened state (and the no-JS / reduced-motion state): number sits top-left */
+.num { top: var(--s-4); left: var(--s-4); translate: 0 0; font-size: clamp(1.4rem, 1.1rem + 1vw, 2rem); }
+.tile:not([data-wide-m]) .num { left: 50%; translate: -50% 0; top: 20%; }
+@media (prefers-reduced-motion: no-preference) {
+  :global(.js) .tile:not(:global(.is-in)) .num { top: 50%; left: 50%; translate: -50% -50%; font-size: clamp(2.25rem, 1.6rem + 2.6vw, 3.5rem); }
+}
+
+.link:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+@media (min-width: 40rem) {
+  .calendar { gap: 14px; }
+  .link { aspect-ratio: 4 / 4.6; }
+}
+
+@media (min-width: 64rem) {
+  .calendar {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-rows: clamp(15rem, 10rem + 8vw, 19rem);
+    max-width: 76rem;
+    margin-inline: auto;
+    grid-auto-flow: dense;
+    gap: 16px;
+  }
+  .tile[data-wide-m] { grid-column: auto; }
+  .tile[data-shape='wide'] { grid-column: span 2; }
+  .tile[data-shape='feature'] { grid-column: span 2; grid-row: span 2; }
+  .link, .tile[data-wide-m] .link { aspect-ratio: auto; }
+  .tile[data-shape='door'] .link { border-radius: 999px 999px 6px 6px; }
+  .tile[data-shape='wide'] .link, .tile[data-shape='feature'] .link { border-radius: 6px; }
+  .tile[data-shape='door'] .num { left: 50%; translate: -50% 0; top: 18%; }
+  .tile[data-shape='wide'] .num, .tile[data-shape='feature'] .num { left: var(--s-5); translate: 0 0; top: var(--s-5); }
+  .body { padding: 0 var(--s-5) var(--s-5); }
+  .tile[data-shape='wide'] .line, .tile[data-shape='feature'] .line { display: block; }
+  .tile[data-shape='door'] .line { display: none; }
+  .tile[data-shape='door'] .name { font-size: clamp(1.3rem, 0.9rem + 0.8vw, 1.7rem); }
+  .tile[data-shape='wide'] .name { font-size: clamp(1.5rem, 1rem + 1vw, 2rem); }
+  .tile[data-shape='feature'] .name { font-size: clamp(2rem, 1.2rem + 1.8vw, 3rem); }
+  .tile[data-shape='feature'] .line { font-size: var(--step-0); }
+  .tile[data-shape='wide'] .go, .tile[data-shape='feature'] .go { display: grid; right: var(--s-5); bottom: var(--s-5); }
+  .tile[data-shape='door'] .go { display: none; }
+}

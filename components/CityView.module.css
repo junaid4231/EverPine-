@@ -1,0 +1,36 @@
+.commHead { display: grid; gap: var(--s-4); margin-bottom: var(--s-7); }
+.groups { display: grid; gap: var(--s-7); }
+.names {
+  list-style: none;
+  padding: 0;
+  margin-top: var(--s-4);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2em 0;
+  font-family: var(--font-serif);
+  font-size: var(--step-2);
+  line-height: 1.25;
+}
+.names li:not(:last-child)::after {
+  content: '·';
+  margin-inline: 0.45em;
+  color: var(--gold);
+}
+.advice { list-style: none; padding: 0; border-top: 1px solid var(--rule); }
+.advice li { border-bottom: 1px solid var(--rule); }
+.adviceLink {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--s-1) var(--s-4);
+  padding-block: var(--s-4);
+  text-decoration: none;
+}
+.adviceName { font-family: var(--font-serif); font-size: var(--step-2); line-height: 1.1; }
+.advicePrice { align-self: center; font-variant-numeric: tabular-nums; color: var(--muted); font-size: var(--step--1); }
+.adviceText { grid-column: 1 / -1; color: var(--muted); font-size: var(--step--1); }
+.adviceText strong { color: var(--fg); font-weight: 500; }
+.adviceLink:hover .adviceName { color: var(--gold-deep); }
+@media (min-width: 64rem) {
+  .commHead { grid-template-columns: 5fr 6fr; align-items: end; gap: var(--s-8); }
+  .groups { grid-template-columns: 1fr 1fr; gap: var(--s-8); }
+}

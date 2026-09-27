@@ -1,0 +1,11 @@
+.list { list-style: none; padding: 0; display: grid; border-top: 1px solid var(--rule); }
+.item { border-bottom: 1px solid var(--rule); }
+.link { display: grid; gap: var(--s-2); padding-block: var(--s-5); text-decoration: none; }
+.title { font-family: var(--font-serif); font-size: var(--step-2); line-height: 1.1; }
+.body { color: var(--muted); max-width: 30rem; }
+.link:hover .title { color: var(--gold-deep); }
+.link > :last-child { display: none; }
+@media (min-width: 64rem) {
+  .link { grid-template-columns: 5fr 6fr 1fr; align-items: baseline; gap: var(--s-6); }
+  .link > :last-child { display: inline-flex; }
+}
