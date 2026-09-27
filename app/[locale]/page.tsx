@@ -47,7 +47,7 @@ export default async function Home({ params }: Props) {
         <div className={s.heroGrid}>
           <div className={s.heroMedia}>
             <div className={`${s.heroArch} arch`}>
-              <Img id={h.hero.image} dict={dict} fill priority quality={85} sizes="(min-width: 64rem) 28rem, 66vw" position="center" className={`${s.kenburns} ${s.lightsOn}`} />
+              <Img id={h.hero.image} dict={dict} fill priority quality={85} sizes="(min-width: 64rem) 28rem, 100vw" position="center" className={`${s.kenburns} ${s.lightsOn}`} />
             </div>
             <span className={s.archLine} aria-hidden="true" />
             <p className={`plate ${s.heroPlate}`}>

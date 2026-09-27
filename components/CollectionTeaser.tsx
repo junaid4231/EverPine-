@@ -29,7 +29,7 @@ export function CollectionTeaser({ dict, locale }: { dict: Dictionary; locale: L
               <li key={pkg.id} className={`${styles.card} ${pkg.id === 'gold' ? styles.featured : ''}`}>
                 <Link href={`${localePath(locale, '/packages')}#${pkg.id}`} className={styles.link} data-track="package_select" data-track-label={`home_${pkg.id}`}>
                   <div className={`${styles.frame} arch`}>
-                    <Img id={c.image} dict={dict} fill sizes="(min-width: 64rem) 28vw, 80vw" />
+                    <Img id={c.image} dict={dict} fill sizes="(min-width: 64rem) 20rem, (min-width: 40rem) 44vw, 74vw" />
                   </div>
                   <div className={styles.body}>
                     <div className={styles.top}>

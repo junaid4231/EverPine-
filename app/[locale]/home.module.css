@@ -90,6 +90,31 @@
 @media (min-width: 40rem) {
   .heroMedia { width: min(60%, 24rem); }
 }
+
+/* Phones & tablets: the photograph becomes an edge-to-edge arch filling the top
+   of the screen, fading into the night, with the headline overlapping its base. */
+@media (max-width: 63.99rem) {
+  .heroGrid { gap: 0; padding-top: 0; }
+  .heroMedia { width: 100%; max-width: 34rem; margin-inline: auto; padding-top: 30px; }
+  .heroArch {
+    aspect-ratio: auto;
+    height: min(64svh, 40rem);
+    min-height: 22rem;
+    box-shadow: 0 0 120px -30px rgb(212 176 106 / 0.3);
+  }
+  .heroArch::after {
+    content: '';
+    position: absolute;
+    inset: 45% 0 0;
+    background: linear-gradient(to bottom, transparent, rgb(12 16 24 / 0.7) 55%, var(--midnight));
+    pointer-events: none;
+  }
+  .archLine { inset: 20px -8px 0; }
+  .heroText { position: relative; z-index: 2; margin-top: -7.5rem; }
+}
+@media (max-width: 47.99rem) {
+  .heroMedia { width: calc(100% + var(--gutter)); max-width: none; margin-inline: calc(var(--gutter) * -0.5); }
+}
 @media (min-width: 64rem) {
   .heroGrid {
     grid-template-columns: repeat(12, 1fr);
