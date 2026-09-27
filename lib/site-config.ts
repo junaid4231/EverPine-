@@ -45,12 +45,18 @@ export function isPlaceholderUrl(url: string | undefined): boolean {
   }
 }
 
-// Fail the production build rather than ship canonicals, sitemap and schema pointing at a placeholder.
-if ((process.env.VERCEL_ENV === 'production' || process.env.SITE_INDEXABLE === 'true') && isPlaceholderUrl(rawSiteUrl)) {
-  throw new Error(`NEXT_PUBLIC_SITE_URL must be the real production domain (got "${rawSiteUrl ?? ''}").`)
+// Until the real domain is set, the site still deploys (e.g. on its *.vercel.app address) but stays
+// noindex — see isIndexable in lib/seo.ts — so no placeholder canonicals ever reach Google.
+// Only an explicit SITE_INDEXABLE=true with a placeholder URL is treated as a hard error.
+if (process.env.SITE_INDEXABLE === 'true' && isPlaceholderUrl(rawSiteUrl)) {
+  throw new Error(`SITE_INDEXABLE=true requires NEXT_PUBLIC_SITE_URL to be the real production domain (got "${rawSiteUrl ?? ''}").`)
+}
+if (process.env.VERCEL_ENV === 'production' && isPlaceholderUrl(rawSiteUrl)) {
+  console.warn('[everpine] NEXT_PUBLIC_SITE_URL is not a real domain yet — deploying with noindex. Set it to go live for search.')
 }
 
-export const siteUrl = rawSiteUrl || 'http://localhost:3000'
+const vercelUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : undefined
+export const siteUrl = rawSiteUrl || vercelUrl || 'http://localhost:3000'
 
 /** Public email is derived from the production domain: info@<domain>. */
 function derivePublicEmail(url: string): string | null {
