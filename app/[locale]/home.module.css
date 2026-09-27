@@ -91,30 +91,53 @@
   .heroMedia { width: min(60%, 24rem); }
 }
 
-/* Phones & tablets: the photograph becomes an edge-to-edge arch filling the top
-   of the screen, fading into the night, with the headline overlapping its base. */
+/* Phones & tablets: a full-screen photograph behind the whole hero. The tree
+   sits in the upper half; a deep night fade carries the headline and buttons
+   at the bottom. A fine gold arch is drawn over the photo as the brand frame. */
 @media (max-width: 63.99rem) {
-  .heroGrid { gap: 0; padding-top: 0; }
-  .heroMedia { width: 100%; max-width: 34rem; margin-inline: auto; padding-top: 30px; }
-  .heroArch {
-    aspect-ratio: auto;
-    height: min(64svh, 40rem);
-    min-height: 22rem;
-    box-shadow: 0 0 120px -30px rgb(212 176 106 / 0.3);
+  .hero { min-height: calc(100svh - var(--header-h)); display: flex; flex-direction: column; }
+  .heroGrid { position: static; flex: 1; gap: 0; padding-block: 0 var(--s-5); align-content: end; }
+  .heroMedia {
+    position: absolute;
+    inset: 0 0 auto;
+    height: min(72svh, 46rem);
+    width: auto;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
   }
+  .heroArch {
+    position: absolute;
+    inset: 0;
+    aspect-ratio: auto;
+    height: auto;
+    border-radius: 0 !important;
+    box-shadow: none;
+  }
+  .heroArch img { object-position: 50% 12% !important; }
   .heroArch::after {
     content: '';
     position: absolute;
-    inset: 45% 0 0;
-    background: linear-gradient(to bottom, transparent, rgb(12 16 24 / 0.7) 55%, var(--midnight));
+    inset: 0;
+    background:
+      linear-gradient(to bottom, rgb(12 16 24 / 0.5) 0%, transparent 14%, transparent 50%, rgb(12 16 24 / 0.72) 72%, rgb(12 16 24 / 0.94) 88%, var(--midnight) 100%);
     pointer-events: none;
   }
-  .archLine { inset: 20px -8px 0; }
-  .heroText { position: relative; z-index: 2; margin-top: -7.5rem; }
+  .archLine {
+    inset: 34px 18px auto;
+    height: calc(min(72svh, 46rem) - 60px);
+    border-color: rgb(232 208 150 / 0.55);
+  }
+  .heroText { position: relative; z-index: 2; padding-top: calc(min(72svh, 46rem) - 11rem); }
+  .sub { color: rgb(243 235 221 / 0.78); }
+  .hero :global(.ornaments) { display: none; }
 }
-@media (max-width: 47.99rem) {
-  .heroMedia { width: calc(100% + var(--gutter)); max-width: none; margin-inline: calc(var(--gutter) * -0.5); }
+@media (max-width: 63.99rem) and (min-aspect-ratio: 3/4) {
+  /* short/wide screens (landscape phones, small tablets): less photo above the text */
+  .heroText { padding-top: calc(min(72svh, 46rem) - 9rem); }
 }
+
 @media (min-width: 64rem) {
   .heroGrid {
     grid-template-columns: repeat(12, 1fr);
