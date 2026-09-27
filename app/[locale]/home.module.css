@@ -93,7 +93,7 @@
 
 /* Phones & tablets: a full-screen photograph behind the whole hero. The tree
    sits in the upper half; a deep night fade carries the headline and buttons
-   at the bottom. A fine gold arch is drawn over the photo as the brand frame. */
+   at the bottom. No frame: the photograph carries the screen on its own. */
 @media (max-width: 63.99rem) {
   .hero { min-height: calc(100svh - var(--header-h)); display: flex; flex-direction: column; }
   .heroGrid { position: static; flex: 1; gap: 0; padding-block: 0 var(--s-5); align-content: end; }
@@ -124,14 +124,9 @@
       linear-gradient(to bottom, rgb(12 16 24 / 0.5) 0%, transparent 14%, transparent 50%, rgb(12 16 24 / 0.72) 72%, rgb(12 16 24 / 0.94) 88%, var(--midnight) 100%);
     pointer-events: none;
   }
-  .archLine {
-    inset: 34px 18px auto;
-    height: calc(min(72svh, 46rem) - 60px);
-    border-color: rgb(232 208 150 / 0.55);
-  }
+  .archLine { display: none; }
   .heroText { position: relative; z-index: 2; padding-top: calc(min(72svh, 46rem) - 11rem); }
   .sub { color: rgb(243 235 221 / 0.78); }
-  .hero :global(.ornaments) { display: none; }
 }
 @media (max-width: 63.99rem) and (min-aspect-ratio: 3/4) {
   /* short/wide screens (landscape phones, small tablets): less photo above the text */
