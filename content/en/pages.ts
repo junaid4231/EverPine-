@@ -176,6 +176,12 @@ export const home = {
     sharjah: 'Family villas, townhouses and apartments across Sharjah — from Al Majaz to Al Zahia.',
   },
   faqHeading: 'Questions, answered',
+  reserve: {
+    line: 'Book now to reserve your slot',
+    sub: 'Installation dates are limited each season, and December goes first.',
+    cta: 'Reserve on WhatsApp',
+    ctaForm: 'Reserve your slot',
+  },
   closing: {
     heading: 'Evenings in December are the first to go.',
     body: 'Limited installation slots each season — book early.',

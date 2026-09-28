@@ -331,3 +331,31 @@
   .areaGo { display: block; justify-self: end; }
 }
 .more { margin-top: var(--s-7); }
+
+/* ───────── Reserve line (just before the closing band) ───────── */
+.reserve {
+  position: relative;
+  padding-block: var(--s-6);
+  background:
+    linear-gradient(90deg, transparent, rgb(212 176 106 / 0.12) 50%, transparent),
+    var(--midnight);
+  border-block: 1px solid rgb(212 176 106 / 0.35);
+}
+.reserveInner { display: grid; justify-items: center; gap: var(--s-4); text-align: center; }
+.reserveStar { width: 14px; height: 14px; color: var(--gold); }
+.reserveText { display: grid; gap: 0.35rem; }
+.reserveText strong {
+  font-family: var(--font-serif-italic);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.75rem, 1.4rem + 1.6vw, 2.6rem);
+  line-height: 1.1;
+  color: var(--gold-soft);
+}
+.reserveText span { color: var(--muted); font-size: var(--step--1); }
+@media (max-width: 47.99rem) {
+  .reserveInner > .btn, .reserveInner > a { width: 100%; }
+}
+@media (min-width: 64rem) {
+  .reserveInner { grid-template-columns: auto 1fr auto; justify-items: start; text-align: left; gap: var(--s-5); }
+}

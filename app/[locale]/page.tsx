@@ -297,6 +297,29 @@ export default async function Home({ params }: Props) {
         </div>
       </section>
 
+      {/* ── Reserve: a short, urgent line before the close ── */}
+      <aside className={s.reserve} aria-label={h.reserve.line}>
+        <div className={`container ${s.reserveInner}`}>
+          <svg className={s.reserveStar} viewBox="0 0 10 10" aria-hidden="true">
+            <path d="M5 0C5.4 3.2 6.8 4.6 10 5 6.8 5.4 5.4 6.8 5 10 4.6 6.8 3.2 5.4 0 5 3.2 4.6 4.6 3.2 5 0Z" fill="currentColor" />
+          </svg>
+          <p className={s.reserveText}>
+            <strong>{h.reserve.line}</strong>
+            <span>{h.reserve.sub}</span>
+          </p>
+          {wa ? (
+            <a href={wa} className="btn btn-gold" data-track="whatsapp_click" data-track-label="home_reserve">
+              <WhatsAppIcon />
+              {h.reserve.cta}
+            </a>
+          ) : (
+            <Link href={`${lp('/contact')}#quote`} className="btn btn-gold">
+              {h.reserve.ctaForm}
+            </Link>
+          )}
+        </div>
+      </aside>
+
       <CtaBand dict={dict} locale={locale} heading={h.closing.heading} placement="home_closing" />
 
       {/* Home FAQs repeat /faq, where the FAQPage markup lives (one marked-up instance per question). */}

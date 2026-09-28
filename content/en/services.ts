@@ -63,7 +63,7 @@ export const servicesIndex: ServiceIndexEntry[] = [
     name: 'Christmas figurines',
     line: 'Reindeer, nutcrackers and seasonal figures, placed where they’ll be noticed.',
     page: 'table-decoration-vases-figurines',
-    image: 'console-garland-silver-reindeer-oval-mirror',
+    image: 'onyx-counter-garland-runner-reindeer-figurines',
   },
   {
     id: 'removal',
@@ -138,13 +138,16 @@ export const servicePages: ServicePage[] = [
       },
       {
         heading: 'What installation involves',
-        body: ['On installation day our team arrives with everything needed. We:'],
+        body: ['On installation day our team arrives with everything needed and dresses the whole house, not just the tree. Depending on your package or the pieces you choose, we:'],
         list: [
           'Deliver the tree and all décor to your door.',
           'Assemble the tree in position and shape it so it looks full from every side you’ll see it.',
           'Dress it — lights, baubles, picks and ribbons layered from the inside out.',
           'Add the topper, the skirt and, in the Silver and Gold packages, gift boxes beneath.',
-          'Walk you through the finished tree before we leave.',
+          'Dress the entrance — a full garland arch around the door, the wreath and bows, fixed neatly to the frame.',
+          'Garland the staircase and railings, with baubles, ribbons and candles carried up every step.',
+          'Style tables and consoles — runners, centrepieces, Christmas vases and figurines — in the same palette as the tree.',
+          'Walk you through the finished house before we leave.',
         ],
       },
       {
