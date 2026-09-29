@@ -60,3 +60,5 @@ Everything the site currently assumes or leaves as a placeholder. Items marked *
 | 31 | **Search Console token** (if using the HTML-tag method) | Vercel env `GOOGLE_SITE_VERIFICATION` |
 | 32 | **Arabic launch timing**: routing and content structure are ready | see README |
 | 33 | **About page trust details**: founder or team names, trade licence, anything true and publishable. Currently it describes the approach only; nothing is invented. | `pages.ts` → `about` |
+| 34 | **New landing-page areas** (29 Sept): Jumeirah Islands and The Lakes on the villa page, and Bluewaters on the luxury page. Remove any you don't serve | `pages.ts` → `landings` |
+| 35 | **Custom scope named on villa/luxury pages**: second trees, majlis, gardens and terraces, and trees taller than 3.6 m, all on a custom quote | `pages.ts` → `landings` |

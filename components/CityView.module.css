@@ -34,3 +34,4 @@
   .commHead { grid-template-columns: 5fr 6fr; align-items: end; gap: var(--s-8); }
   .groups { grid-template-columns: 1fr 1fr; gap: var(--s-8); }
 }
+.related { list-style: none; padding: 0; margin: var(--s-6) 0 0; display: flex; flex-wrap: wrap; gap: var(--s-3) var(--s-6); }

@@ -33,23 +33,27 @@ This document explains the SEO built into the site and how to keep it working ea
 | Office planning | how to plan office christmas decorations · office christmas décor ideas | Informational → commercial | Med | Med | `/guides/office-christmas-decor-planning` |
 | Questions | how much does christmas decoration cost · when to book christmas decorators | Informational | Low–Med | Low | `/faq` |
 
+**Added 29 Sept 2026:** villa and luxury landing pages, an expanded Dubai page and a home intro section. See `SEO-AUDIT-2026-09.md`.
+
 **Deliberately not built:** per-community pages (Palm Jumeirah, Arabian Ranches, Al Zahia…). Without real, distinct project content they would be doorway pages. Communities are listed on the city pages instead. Once Everpine has permission to publish specific projects, a community page with a genuine case study becomes worth adding.
 
 ## 3. Page-to-query mapping (as built)
 
 | URL | Title tag | H1 | Primary target | Secondary |
 |---|---|---|---|---|
-| `/` | Christmas Decoration Company in Dubai & Sharjah · Everpine | Christmas decoration, installed for you in Dubai & Sharjah | christmas decoration company dubai | christmas decoration dubai / sharjah, brand |
+| `/` | Christmas Decoration Dubai \| Christmas Decorators · Everpine | Christmas decoration, installed for you in Dubai & Sharjah | christmas decoration dubai · christmas decoration company dubai | sharjah, brand; H2 "Professional Christmas decorators in Dubai" |
 | `/packages` | Christmas Decoration & Tree Packages: Prices, Dubai | Christmas decoration packages | christmas decoration packages / price dubai | christmas tree dubai price |
-| `/services` | Our Christmas Décor Services: Trees, Arches & Lights | Christmas decoration services | christmas decoration services | hub for internal links |
+| `/services` | Christmas Decoration Services in Dubai & Sharjah | Christmas decoration services in Dubai | christmas decoration services | hub for internal links |
 | `/services/christmas-tree-installation` | Christmas Tree Installation Dubai: Prices & Rental | Christmas tree supply & installation in Dubai and Sharjah | christmas tree installation dubai | christmas tree dubai price, rental, delivery & setup |
 | `/services/christmas-lighting` | Christmas Lights Installation for Villas in Dubai | Christmas lights installation for villas & businesses in Dubai and Sharjah | christmas lights installation dubai | villa christmas lights |
 | `/services/door-arches-and-wreaths` | Christmas Door Arches & Wreaths in Dubai & Sharjah | Christmas door arches & wreaths | christmas door arch dubai | wreaths, garland arch |
 | `/services/staircase-and-railing-decoration` | Staircase & Railing Christmas Decoration, Dubai | Staircase & railing Christmas decoration | staircase christmas decoration | railing, banister garland |
 | `/services/table-decoration-vases-figurines` | Christmas Table Decoration, Vases & Figurines | Christmas table decoration, vases & figurines | christmas table decoration dubai | centrepieces, figurines |
 | `/services/christmas-decoration-removal` | Christmas Decoration Removal in Dubai & Sharjah | Christmas decoration removal in Dubai & Sharjah | christmas decoration removal dubai | takedown |
-| `/commercial-christmas-decor` | Office Christmas Decoration in Dubai & Sharjah | Office, hotel & restaurant Christmas decoration in Dubai and Sharjah | office christmas decoration dubai | hotel / restaurant / retail |
-| `/christmas-decoration-dubai` | Christmas Decorators in Dubai: Villas & Homes | Christmas decoration in Dubai | christmas decorators dubai | villa / apartment, communities |
+| `/commercial-christmas-decor` | Office Christmas Decorators in Dubai & Sharjah | Office Christmas decorators in Dubai and Sharjah | office christmas decorators dubai | hotel / restaurant / retail |
+| `/christmas-decoration-dubai` | Christmas Decorators in Dubai: Villas & Offices | Christmas decorators in Dubai | christmas decorators (in) dubai · christmas decorator dubai · professional · near me | services dubai, prices, communities |
+| `/villa-christmas-decoration-dubai` | Villa Christmas Decorators in Dubai: Trees & Lights | Villa Christmas decoration in Dubai | villa christmas decorators dubai | villa christmas lights, villa communities |
+| `/luxury-christmas-decoration-dubai` | Luxury Christmas Decoration in Dubai: Bespoke Design | Luxury Christmas decoration in Dubai | luxury christmas decoration dubai | bespoke, statement tree |
 | `/christmas-decoration-sharjah` | Christmas Decoration in Sharjah: Villas & Homes | Christmas decoration in Sharjah | christmas decoration sharjah | christmas tree sharjah |
 | `/gallery` | Christmas Decoration Gallery & Ideas | Christmas decoration gallery | christmas decoration ideas | door arch ideas |
 | `/guides/christmas-tree-size-ceiling-height` | Christmas Tree Size for Your Ceiling: Calculator | What size Christmas tree fits your ceiling? | christmas tree size for ceiling | tree width, placement |
@@ -82,7 +86,7 @@ Every page has a unique title (≤70 characters including the brand), a unique 7
 - **City pages:** link in the text to packages, services and the other city.
 - **Home:** in-text anchors to both city pages, the full services index, and a package teaser that links to `/packages#basic|silver|gold`.
 - **Breadcrumbs** appear on every inner page, as visible links plus `BreadcrumbList` markup.
-- **No orphans:** all 19 URLs are in `sitemap.xml` and are linked from at least two places.
+- **No orphans:** all 21 URLs are in `sitemap.xml` and are linked from at least two places.
 
 ## 5. Structured data
 

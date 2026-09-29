@@ -33,7 +33,7 @@ export default async function Commercial({ params }: Props) {
   return (
     <>
       <PageHero
-        accent="Christmas decoration"
+        accent="Christmas decorators"
         dict={dict}
         locale={locale}
         trail={trail}

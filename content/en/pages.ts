@@ -75,9 +75,9 @@ export const faqs = {
 
 export const home = {
   meta: {
-    title: 'Christmas Decoration Company in Dubai & Sharjah · Everpine',
+    title: 'Christmas Decoration Dubai | Christmas Decorators · Everpine',
     description:
-      'Christmas trees, door arches, wreaths, stair garlands, table décor and house lighting — delivered, installed and styled in Dubai & Sharjah. From AED 5,500.',
+      'Christmas decoration company in Dubai & Sharjah. Our decorators supply, install and style trees, door arches, garlands and villa lights. From AED 5,500.',
   } satisfies PageMeta,
   hero: {
     h1a: 'Christmas decoration,',
@@ -106,7 +106,7 @@ export const home = {
   },
   services: {
     eyebrow: 'Services',
-    heading: 'Everything the season needs, front door to dining table',
+    heading: 'Christmas decoration services, front door to dining table',
     intro: 'Book a package, or choose individual pieces. Every service includes delivery, installation and styling.',
   },
   marquee: ['Christmas trees', 'Door arches', 'Wreaths', 'House lighting', 'Staircase garlands', 'Table styling', 'Figurines', 'Removal after the season'],
@@ -170,12 +170,28 @@ export const home = {
   },
   areas: {
     eyebrow: 'Where we work',
-    heading: 'Dubai and Sharjah',
+    heading: 'Christmas decorators in Dubai and Sharjah',
     lead: 'Looking for [Christmas decoration in Dubai](/christmas-decoration-dubai) or [Christmas decoration in Sharjah](/christmas-decoration-sharjah)? Both pages cover the areas we work in, access in towers and villa communities, and which package suits which home.',
     dubai: 'Villas, apartments, offices, hotels and restaurants across Dubai — from the Palm to the Ranches.',
     sharjah: 'Family villas, townhouses and apartments across Sharjah — from Al Majaz to Al Zahia.',
   },
-  faqHeading: 'Questions, answered',
+  faqHeading: 'Christmas decoration in Dubai: questions, answered',
+  /** Crawlable introduction: who we are, what we do, for whom — with links to each landing page. */
+  about: {
+    eyebrow: 'Christmas decoration company',
+    heading: 'Professional Christmas decorators in Dubai',
+    body: [
+      'Everpine Events is a Christmas decoration company for homes and businesses in Dubai and Sharjah. Our decorators supply every piece, deliver it, install it and style it by hand — so you get one finished look instead of a weekend of boxes and ladders.',
+      'For **villas**, that means a statement tree, a garland arch at the front door, a dressed staircase and house lighting along the rooflines — see [villa Christmas decoration in Dubai](/villa-christmas-decoration-dubai). For **apartments**, a tree sized to your ceiling and a finished front door. For **offices, hotels, restaurants and shops**, décor that works around your hours — see [office Christmas decorators](/commercial-christmas-decor). And when you want something beyond a package, we design it: [luxury Christmas decoration in Dubai](/luxury-christmas-decoration-dubai).',
+      'Unlike most Christmas decoration services in Dubai, we publish our prices: Basic **AED 5,500**, Silver **AED 14,800** and Gold **AED 24,700**, each including delivery, installation and styling. [Compare the packages](/packages), browse [real installations](/gallery), or read about [Christmas decorators in Dubai](/christmas-decoration-dubai) and [Christmas decoration in Sharjah](/christmas-decoration-sharjah).',
+    ] as string[],
+    points: [
+      { k: 'Supplied', v: 'Tree, garlands, arches, lights and figurines — everything comes with us.' },
+      { k: 'Installed & styled', v: 'Built in position and dressed by hand in one palette.' },
+      { k: 'Published prices', v: 'Packages from AED 5,500, delivery and styling included.' },
+      { k: 'Dubai & Sharjah', v: 'Villas, apartments, offices, hotels, restaurants and retail.' },
+    ],
+  },
   reserve: {
     line: 'Book now to reserve your slot',
     sub: 'Installation dates are limited each season, and December goes first.',
@@ -241,37 +257,37 @@ export const packagesPage = {
 
 export const commercial = {
   meta: {
-    title: 'Office Christmas Decoration in Dubai & Sharjah',
+    title: 'Office Christmas Decorators in Dubai & Sharjah',
     description:
       'Christmas trees, entrance arches, garlands and lighting for offices, hotels, restaurants and shops in Dubai and Sharjah — designed, installed and removed.',
   } satisfies PageMeta,
   eyebrow: 'For businesses',
-  h1: 'Office, hotel & restaurant Christmas decoration in Dubai and Sharjah',
+  h1: 'Office Christmas decorators in Dubai and Sharjah',
   intro:
-    'Your guests, clients and team notice Christmas before anything else. We design and install Christmas decoration for offices, hotels, restaurants and shops across Dubai and Sharjah — from DIFC and Business Bay to Al Majaz — striking from the entrance, practical around daily operations, and taken down when you need the space back.',
+    'Your guests, clients and team notice Christmas before anything else. As office Christmas decorators, we design and install Christmas decoration for offices, hotels, restaurants and shops across Dubai and Sharjah — from DIFC and Business Bay to Al Majaz — striking from the entrance, practical around daily operations, and taken down when you need the space back.',
   hero: 'tall-bronze-champagne-tree-lounge-window' as ImageId,
   audiences: [
     {
       id: 'offices',
-      title: 'Offices',
+      title: 'Office Christmas decoration',
       body: 'Reception is the first impression, so it gets the tree. Then the lift lobby, meeting rooms and pantry, in a palette that sits well with your brand. Tell us your working hours and we’ll agree an installation time around them.',
       image: 'greenery-garland-glass-entrance-wreath' as ImageId,
     },
     {
       id: 'hotels',
-      title: 'Hotels & hospitality',
+      title: 'Hotel & hospitality Christmas décor',
       body: 'Tall lobby trees, framed entrances and lounge styling that photograph well — because guests will photograph them. We work to your property’s access and safety requirements.',
       image: 'gold-lit-tree-red-bauble-base-atrium' as ImageId,
     },
     {
       id: 'restaurants',
-      title: 'Restaurants & cafés',
+      title: 'Restaurant & café Christmas décor',
       body: 'A shopfront arch or a feature wall that makes people stop outside, and table-level details that carry the theme through service.',
       image: 'bronze-copper-bauble-wall-illuminated-arch' as ImageId,
     },
     {
       id: 'retail',
-      title: 'Retail',
+      title: 'Retail & shopfront Christmas décor',
       body: 'Entrances, windows and a tree inside the door. Lit décor keeps a frontage visible in the evening.',
       image: 'red-bauble-arch-shopfront-evening' as ImageId,
     },
@@ -313,6 +329,14 @@ export const commercial = {
       q: 'Can you work to our brand colours?',
       a: 'Yes. Send your brand palette with the brief and we’ll design around it.',
     },
+    {
+      q: 'Which areas of Dubai do you cover for offices?',
+      a: 'All of Dubai, including DIFC, Business Bay, Downtown, Dubai Marina, JLT, Dubai Media City and Dubai Internet City — and Sharjah.',
+    },
+    {
+      q: 'How early should a business book Christmas decorators?',
+      a: 'As early as possible, ideally once you have building approval. Installation slots are limited each season, and dates close to December go first.',
+    },
   ] satisfies Faq[],
 }
 
@@ -322,20 +346,35 @@ export const cities: Record<'dubai' | 'sharjah', CityPage> = {
   dubai: {
     area: 'dubai',
     meta: {
-      title: 'Christmas Decorators in Dubai: Villas & Homes',
+      title: 'Christmas Decorators in Dubai: Villas & Offices',
       description:
-        'Christmas decorators in Dubai: trees, door arches, garlands, table décor and villa lighting, delivered, installed and styled across Dubai. Packages from AED 5,500.',
+        'Professional Christmas decorators in Dubai. We supply, install and style trees, door arches, garlands and villa lighting — packages from AED 5,500.',
     },
-    eyebrow: 'Dubai',
-    h1: 'Christmas decoration in Dubai',
+    eyebrow: 'Christmas decorators · Dubai',
+    h1: 'Christmas decorators in Dubai',
+    accent: 'Dubai',
+    crumb: 'Christmas decorators in Dubai',
     intro:
-      'From Palm Jumeirah villas to Downtown apartments and DIFC offices, we deliver, install and style Christmas across Dubai — tree, entrance, staircase, table and house lighting.',
+      'Everpine Events is a Christmas decoration company that comes to you anywhere in Dubai. We supply everything, deliver it, install it and style it — the tree, the front-door arch, the staircase, the table and the house lighting — for villas, apartments, offices, hotels and restaurants. Published packages from AED 5,500.',
     hero: 'black-door-arch-red-white-gold-baubles-lit-reindeer-night',
     sections: [
       {
-        heading: 'Villas',
+        heading: 'What professional Christmas decorators do for you',
         body: [
-          'Villa communities are where the full composition comes into its own: a 3 m-plus tree in a double-height hall, a staircase dressed to match, and house lighting along the rooflines so the house glows after sunset. The [Gold package](/packages#gold) covers all of it.',
+          'Hiring Christmas decorators in Dubai should mean you don’t lift a box. Our team arrives with the tree, garlands, lights, ribbons, baubles and figurines, builds everything in position, shapes every branch and dresses it by hand in the palette you chose. Before we leave, we walk you through it.',
+          'That is the difference between buying Christmas decorations in Dubai and booking a Christmas decoration service: you get one finished look, carried from the front door to the dining table, instead of a pile of boxes and a weekend on a ladder.',
+        ],
+        list: [
+          '**Supplied** — every piece comes with us; nothing to buy separately.',
+          '**Delivered and installed** — built in place, lit and checked.',
+          '**Styled** — dressed by hand in one palette across the whole home.',
+          '**Removed** — we can come back after the season to take it all down ([removal service](/services/christmas-decoration-removal)).',
+        ],
+      },
+      {
+        heading: 'Villa Christmas decoration in Dubai',
+        body: [
+          'Villas are where the full composition comes into its own: a 3 m-plus tree in a double-height hall, a staircase dressed to match, a garland arch at the entrance and house lighting along the rooflines so the villa glows after sunset. The [Gold package](/packages#gold) covers all of it. See [villa Christmas decoration in Dubai](/villa-christmas-decoration-dubai) for how we plan a whole villa.',
           'Many master communities have guidelines on exterior decorations. Check with your community management before we light the façade — a quick email usually does it.',
         ],
       },
@@ -343,19 +382,52 @@ export const cities: Record<'dubai' | 'sharjah', CityPage> = {
         heading: 'Apartments and towers',
         body: [
           'In towers, most of the planning is access. Buildings typically ask residents to book the service lift and notify management about deliveries, and some restrict loading times. When we confirm your date we’ll tell you exactly what to arrange.',
-          'A 2.4 m tree suits most apartment ceilings — check yours with our [tree size guide](/guides/christmas-tree-size-ceiling-height).',
+          'A 2.4 m tree suits most apartment ceilings — check yours with our [tree size guide](/guides/christmas-tree-size-ceiling-height). The [Basic package](/packages#basic) adds a door arch and wreath, so the flat feels finished from the corridor in.',
         ],
       },
       {
-        heading: 'Offices, hotels and restaurants',
+        heading: 'Office Christmas decorators in Dubai',
         body: [
-          'Across DIFC, Business Bay, Downtown, Dubai Marina, JLT and Dubai Media City, businesses want décor that’s striking at the entrance and works around daily operations. See [Christmas décor for businesses](/commercial-christmas-decor).',
+          'Across DIFC, Business Bay, Downtown, Dubai Marina, JLT and Dubai Media City, businesses want décor that’s striking at reception and works around daily operations. We plan installation around your hours and your building’s access and safety rules, and return to take it down. See [office and commercial Christmas decoration](/commercial-christmas-decor).',
+        ],
+      },
+      {
+        heading: 'Luxury and bespoke Christmas decoration',
+        body: [
+          'If you want something beyond a package — a taller tree, more rooms, a particular palette, or décor that matches marble, timber and brass — we design it for your home and quote it individually. See [luxury Christmas decoration in Dubai](/luxury-christmas-decoration-dubai).',
+        ],
+      },
+      {
+        heading: 'Christmas decoration prices in Dubai',
+        body: [
+          'We publish our prices, so you can plan before you call. Each package includes delivery, installation and styling:',
+        ],
+        list: [
+          '**Basic — AED 5,500:** 2.4 m tree, tree skirt, door arch and wreath.',
+          '**Silver — AED 14,800:** 2.7 m tree, tree skirt, gift boxes, door arch, wreath and stair decoration.',
+          '**Gold — AED 24,700:** 3–3.6 m tree, tree skirt, gift boxes, door arch, wreath, stair and table decoration, figurines and house lighting.',
+          '**Custom and commercial** projects are quoted individually. Compare everything on the [packages page](/packages).',
+        ],
+      },
+      {
+        heading: 'When to book your Christmas decorators',
+        body: [
+          'Installation slots are limited each season, and the dates closest to Christmas go first. Most clients want their home finished in time to enjoy the whole of December, so the best time to book is as early as you can — send your area, property type and preferred date and we’ll confirm what’s available.',
+        ],
+      },
+      {
+        heading: 'How booking works',
+        body: ['Three steps, and one visit from our team:'],
+        list: [
+          '**Tell us about the space** — your area, property type, a photo of the room and your preferred date, on WhatsApp or through the [quote form](/contact#quote).',
+          '**Confirm** — we agree the palette and the final quote, and reserve your installation slot.',
+          '**Come home to it** — our team delivers, installs and styles everything. Someone needs to let us in and agree placement at the start.',
         ],
       },
     ],
     communities: {
-      heading: 'Areas we cover in Dubai',
-      note: 'We work across Dubai. These are some of the communities and districts we cover — if yours isn’t listed, just ask.',
+      heading: 'Christmas decorators near you in Dubai',
+      note: 'We come to you across Dubai. These are some of the communities and districts we cover — if yours isn’t listed, just ask.',
       groups: [
         {
           label: 'Villa communities',
@@ -402,11 +474,29 @@ export const cities: Record<'dubai' | 'sharjah', CityPage> = {
         { pkg: 'custom', text: '**Offices, hotels and restaurants** — quoted individually.' },
       ],
     },
-    plates: ['villa-facade-icicle-lights-reindeer-dusk', 'frosted-tree-poinsettias-gift-boxes-pool-view', 'tall-bronze-champagne-tree-lounge-window'],
+    plates: [
+      'stylist-placing-red-baubles-on-tree',
+      'villa-facade-icicle-lights-reindeer-dusk',
+      'frosted-tree-poinsettias-gift-boxes-pool-view',
+      'tall-bronze-champagne-tree-lounge-window',
+      'green-gold-tree-velvet-bow-neutral-living-room',
+    ],
     faqs: [
       {
-        q: 'Do you cover all of Dubai?',
-        a: 'Yes — villas, apartments and businesses across Dubai. If you’re unsure about your area, ask when you enquire.',
+        q: 'Who are the best Christmas decorators in Dubai for a villa?',
+        a: 'Look for a team that supplies everything, installs and styles it, covers exterior lighting, and publishes clear prices. Everpine does all four — see our [packages](/packages) and [gallery](/gallery) of real installations.',
+      },
+      {
+        q: 'How much do Christmas decorators cost in Dubai?',
+        a: 'Our packages are AED 5,500, AED 14,800 and AED 24,700, including delivery, installation and styling. Custom and commercial work is quoted individually. Final quote confirmed on enquiry.',
+      },
+      {
+        q: 'Are there Christmas decorators near me in Dubai?',
+        a: 'We come to you — villas, apartments and businesses across Dubai, from Palm Jumeirah and Emirates Hills to Arabian Ranches, Dubai Hills, Downtown and Dubai Marina. If you’re unsure about your area, ask when you enquire.',
+      },
+      {
+        q: 'Do you supply the decorations, or do I buy them?',
+        a: 'We supply everything in your package — the tree, garlands, arches, wreaths, baubles, ribbons and lights — and install and style it. Trees are yours to keep, or can be rented.',
       },
       {
         q: 'Can you install a Christmas tree in a Dubai apartment tower?',
@@ -417,9 +507,19 @@ export const cities: Record<'dubai' | 'sharjah', CityPage> = {
         a: 'Yes. House lighting is included in the [Gold package](/packages#gold) and can be booked on its own. Check your community’s guidelines on exterior decorations first.',
       },
       {
-        q: 'How much does Christmas decoration cost in Dubai?',
-        a: 'Packages are AED 5,500, AED 14,800 and AED 24,700, including delivery, installation and styling. Final quote confirmed on enquiry.',
+        q: 'Do you decorate offices in Dubai?',
+        a: 'Yes — offices, hotels, restaurants and shops. Commercial projects are quoted individually. See [office Christmas decoration](/commercial-christmas-decor).',
       },
+      {
+        q: 'When should I book Christmas decorators in Dubai?',
+        a: 'As early as you can. Installation slots are limited each season, and dates closest to Christmas go first.',
+      },
+    ],
+    related: [
+      { href: '/villa-christmas-decoration-dubai', label: 'Villa Christmas decoration in Dubai' },
+      { href: '/luxury-christmas-decoration-dubai', label: 'Luxury Christmas decoration in Dubai' },
+      { href: '/commercial-christmas-decor', label: 'Office Christmas decorators' },
+      { href: '/christmas-decoration-sharjah', label: 'Christmas decoration in Sharjah' },
     ],
   },
   sharjah: {
@@ -496,6 +596,236 @@ export const cities: Record<'dubai' | 'sharjah', CityPage> = {
         q: 'Can you install a tree in a Sharjah apartment building?',
         a: 'Yes. If your building needs a service-lift booking or delivery notice, we’ll tell you what to arrange when we confirm your date.',
       },
+    ],
+  },
+}
+
+/* ──────────────────────────────── Audience landing pages (Dubai) ──────────────────────────────── */
+
+const dubaiVillaCommunities = [
+  'Palm Jumeirah',
+  'Emirates Hills',
+  'Jumeirah Islands',
+  'Jumeirah',
+  'Umm Suqeim',
+  'Al Barsha',
+  'Arabian Ranches',
+  'Dubai Hills Estate',
+  'Al Barari',
+  'DAMAC Hills',
+  'Tilal Al Ghaf',
+  'The Springs & The Meadows',
+  'The Lakes',
+  'Jumeirah Golf Estates',
+  'Mudon',
+  'Mirdif',
+]
+
+export const landings: Record<'villa' | 'luxury', CityPage> = {
+  villa: {
+    area: 'dubai',
+    path: '/villa-christmas-decoration-dubai',
+    ogKey: 'villa',
+    crumb: 'Villa Christmas decoration in Dubai',
+    serviceType: 'Villa Christmas decoration',
+    message: 'Hello Everpine, I’d like to plan Christmas décor for my villa in Dubai.',
+    meta: {
+      title: 'Villa Christmas Decorators in Dubai: Trees & Lights',
+      description:
+        'Villa Christmas decorators in Dubai: a statement tree, entrance arch, staircase garland and exterior house lighting — installed and styled. Gold from AED 24,700.',
+    },
+    eyebrow: 'Villas · Dubai',
+    h1: 'Villa Christmas decoration in Dubai',
+    accent: 'Villa',
+    intro:
+      'A villa deserves more than a tree in the corner. We decorate the whole house — the entrance your guests arrive at, the hall, the staircase, the dining table and the façade after dark — in one palette, supplied, installed and styled by our team.',
+    hero: 'villa-facade-icicle-lights-reindeer-dusk',
+    sections: [
+      {
+        heading: 'We plan the villa as one composition',
+        body: [
+          'Villa Christmas decoration works best when it is planned from the street inwards. Guests see the façade first, then the front door, then the hall and the stairs, then the table. We carry one palette through all of it, so each space leads into the next rather than competing with it.',
+        ],
+        list: [
+          '**The façade** — house lighting along rooflines, balconies and arches, switched on at dusk.',
+          '**The entrance** — a full garland door arch and a matching wreath, built to fit pivot, double and arched doors.',
+          '**The hall** — a 3–3.6 m tree sized to the ceiling, lit and dressed by hand, with a tree skirt and gift boxes.',
+          '**The staircase** — garland along the full length of the rail, styled to match the tree.',
+          '**The table** — runner, centrepiece and figurines for Christmas lunch.',
+        ],
+      },
+      {
+        heading: 'Exterior Christmas lights for villas',
+        body: [
+          'In the Gulf, Christmas happens after sunset, so the outside of a villa matters as much as the inside. House lighting is included in the [Gold package](/packages#gold) and can be booked on its own for any villa — see [Christmas lights installation](/services/christmas-lighting).',
+          'Most master communities in Dubai have guidelines on exterior decorations. Check with your community management before the façade is lit; a short email usually settles it.',
+        ],
+      },
+      {
+        heading: 'A tree sized for a double-height hall',
+        body: [
+          'Villa halls often rise well above a standard ceiling, and a tree that looks generous in a shop can look lost there. Measure at the exact spot the tree will stand — to the lowest point above it — and allow about 30 cm for the topper. Our [tree size calculator](/guides/christmas-tree-size-ceiling-height) does the maths. Gold includes a 3–3.6 m tree; taller trees are quoted on request.',
+        ],
+      },
+      {
+        heading: 'Which package suits a villa?',
+        body: [
+          '**Silver (AED 14,800)** suits townhouses and smaller villas with a staircase. **Gold (AED 24,700)** is the full villa composition, including house lighting. Larger villas, second trees, extra rooms or gardens are quoted individually — see [all packages](/packages) or ask for a [custom design](/luxury-christmas-decoration-dubai).',
+        ],
+      },
+      {
+        heading: 'Installation day at your villa',
+        body: [
+          'Someone needs to let our team in and agree placement at the start. We deliver everything, build it in position, dress it and switch it on, then walk you through it. When the season is over, we can come back to take it all down — [post-Christmas removal](/services/christmas-decoration-removal) is booked separately.',
+        ],
+      },
+    ],
+    communities: {
+      heading: 'Villa communities we cover in Dubai',
+      note: 'We decorate villas across Dubai. These are some of the communities we cover — if yours isn’t listed, just ask. For Sharjah villas, see [Christmas decoration in Sharjah](/christmas-decoration-sharjah).',
+      groups: [
+        { label: 'Villa communities', items: dubaiVillaCommunities.slice(0, 8) },
+        { label: 'More villa communities', items: dubaiVillaCommunities.slice(8) },
+      ],
+    },
+    packageAdvice: {
+      heading: 'Villa packages at a glance',
+      items: [
+        { pkg: 'silver', text: '**Townhouses and smaller villas** — 2.7 m tree, gift boxes, door arch, wreath and a dressed staircase.' },
+        { pkg: 'gold', text: '**Villas with double-height halls** — 3–3.6 m tree, staircase, table, figurines and exterior house lighting.' },
+        { pkg: 'custom', text: '**Larger villas and gardens** — more trees, more rooms, garden lighting; quoted individually.' },
+      ],
+    },
+    plates: ['villa-balcony-red-bow-warm-string-lights-dusk', 'double-door-arch-red-bows-twin-wreaths-oversized-baubles', 'red-gold-tree-poinsettias-faux-fur-skirt-living-room', 'staircase-frosted-garland-red-gold-baubles-candles', 'table-runner-poinsettia-pinecones-marble-table'],
+    faqs: [
+      {
+        q: 'How much does it cost to decorate a villa for Christmas in Dubai?',
+        a: 'Our Silver package is AED 14,800 and Gold, the full villa composition with house lighting, is AED 24,700 — both including delivery, installation and styling. Larger villas are quoted individually.',
+      },
+      {
+        q: 'Do you put up outdoor Christmas lights on villas?',
+        a: 'Yes. House lighting along rooflines, balconies and arches is included in Gold and can be booked on its own. Check your community’s guidelines on exterior decorations first.',
+      },
+      {
+        q: 'What size tree do I need for a villa hall?',
+        a: 'Usually 3 m or more for a double-height space. Allow about 30 cm between the topper and the ceiling at the spot where the tree will stand.',
+      },
+      {
+        q: 'Can you decorate more than one room or add a second tree?',
+        a: 'Yes. Packages are a starting point — extra trees, rooms, gardens or majlis spaces are quoted individually.',
+      },
+      {
+        q: 'Do you take the decorations down after Christmas?',
+        a: 'Yes, removal is available as a separate service. You can book your removal date with the installation.',
+      },
+    ],
+    related: [
+      { href: '/christmas-decoration-dubai', label: 'Christmas decorators in Dubai' },
+      { href: '/luxury-christmas-decoration-dubai', label: 'Luxury Christmas decoration in Dubai' },
+      { href: '/services/christmas-lighting', label: 'Christmas lights installation' },
+      { href: '/packages', label: 'Compare packages' },
+    ],
+  },
+  luxury: {
+    area: 'dubai',
+    path: '/luxury-christmas-decoration-dubai',
+    ogKey: 'luxury',
+    crumb: 'Luxury Christmas decoration in Dubai',
+    serviceType: 'Luxury Christmas decoration',
+    message: 'Hello Everpine, I’d like to discuss a bespoke Christmas design in Dubai.',
+    meta: {
+      title: 'Luxury Christmas Decoration in Dubai: Bespoke Design',
+      description:
+        'Luxury Christmas decoration in Dubai: tall statement trees, dense garland arches and one palette through the whole home — designed, installed and styled for you.',
+    },
+    eyebrow: 'Bespoke · Dubai',
+    h1: 'Luxury Christmas decoration in Dubai',
+    accent: 'Luxury',
+    intro:
+      'Luxury at Christmas isn’t more of everything. It’s a tree that fills its space properly, an arch dense enough to frame the door, and one palette carried through marble, timber and brass. We design it for your home, then supply, install and style every piece.',
+    hero: 'tall-bronze-champagne-tree-lounge-window',
+    sections: [
+      {
+        heading: 'Fewer, fuller pieces',
+        body: [
+          'Our approach to luxury Christmas décor is restraint with generosity: fewer pieces, each one full. A tree dressed bauble by bauble until no gap shows, a garland that runs the whole length of the rail, an entrance arch built thick enough to read from the driveway. It photographs beautifully because it is finished from every side you’ll see it.',
+        ],
+      },
+      {
+        heading: 'A palette designed for your interior',
+        body: [
+          'We start from the house, not a catalogue. Send photos of the rooms and we’ll suggest a palette that sits with your stone, joinery and art:',
+        ],
+        list: [
+          '**Bronze & champagne** — warm metallics for timber, travertine and hotel-style lounges.',
+          '**Frost & silver** — flocked branches lit warm, for white and grey interiors.',
+          '**Emerald & gold** — deep green layered with gold against white stone and dark doors.',
+          '**Quiet neutrals** — green, gold and a single velvet bow for calm, minimal homes.',
+          '**Classic red & gold** — the Christmas everyone remembers, done fully.',
+        ],
+      },
+      {
+        heading: 'Statement trees and custom heights',
+        body: [
+          'Our Gold package includes a 3–3.6 m tree. For grand halls, atriums and double-height living rooms we quote taller trees and second trees individually. See [Christmas tree installation](/services/christmas-tree-installation) and the [tree size guide](/guides/christmas-tree-size-ceiling-height).',
+        ],
+      },
+      {
+        heading: 'The whole home, and the outside too',
+        body: [
+          'A bespoke design can cover every space guests pass through — entrance, hall, staircase, majlis, dining table, terrace — and [house lighting](/services/christmas-lighting) so the villa glows after sunset. For the full villa approach, see [villa Christmas decoration in Dubai](/villa-christmas-decoration-dubai).',
+        ],
+      },
+      {
+        heading: 'How a bespoke project works',
+        body: ['A simple path, even for a large home:'],
+        list: [
+          '**Brief** — photos of each space, ceiling heights, the palette you like and your preferred date.',
+          '**Design and quote** — we propose the pieces for each space and send a quote.',
+          '**Installation** — our team delivers, builds and styles everything, then walks you through it.',
+          '**After the season** — we return to take it down, if you book [removal](/services/christmas-decoration-removal).',
+        ],
+      },
+    ],
+    communities: {
+      heading: 'Where we design and install in Dubai',
+      note: 'We work in homes across Dubai — and in Sharjah. If your area isn’t listed, just ask.',
+      groups: [
+        { label: 'Villa communities', items: dubaiVillaCommunities.slice(0, 10) },
+        { label: 'Apartments & penthouses', items: ['Downtown Dubai', 'Business Bay', 'DIFC', 'Dubai Marina', 'JBR', 'City Walk', 'Bluewaters', 'Dubai Creek Harbour'] },
+      ],
+    },
+    packageAdvice: {
+      heading: 'From package to bespoke',
+      items: [
+        { pkg: 'gold', text: '**Our most complete package** — 3–3.6 m tree, entrance, staircase, table, figurines and house lighting.' },
+        { pkg: 'custom', text: '**Bespoke designs** — taller or additional trees, more rooms, gardens and terraces; quoted individually.' },
+      ],
+    },
+    plates: ['emerald-gold-bauble-arch-sunburst-door', 'flocked-lit-garland-arch-wood-door-frosted-wreath', 'gold-lit-tree-red-bauble-base-atrium', 'onyx-counter-garland-runner-reindeer-figurines', 'console-garland-silver-reindeer-oval-mirror'],
+    faqs: [
+      {
+        q: 'How much does luxury Christmas decoration cost in Dubai?',
+        a: 'Our Gold package is AED 24,700 including delivery, installation and styling. Bespoke designs with taller trees, more rooms or outdoor spaces are quoted individually.',
+      },
+      {
+        q: 'Can you design around our interior and colours?',
+        a: 'Yes. Send photos of each space and we’ll suggest a palette, or work to one you already have in mind.',
+      },
+      {
+        q: 'Can you install a tree taller than 3.6 m?',
+        a: 'Yes, on a custom quote. Send us the ceiling height at the spot where the tree will stand.',
+      },
+      {
+        q: 'Do you decorate penthouses and apartments as well as villas?',
+        a: 'Yes. In towers we’ll tell you what to arrange with building management, such as a service-lift booking, when we confirm your date.',
+      },
+    ],
+    related: [
+      { href: '/villa-christmas-decoration-dubai', label: 'Villa Christmas decoration in Dubai' },
+      { href: '/christmas-decoration-dubai', label: 'Christmas decorators in Dubai' },
+      { href: '/gallery', label: 'See the gallery' },
+      { href: '/packages', label: 'Compare packages' },
     ],
   },
 }
@@ -896,12 +1226,12 @@ export const guides = {
 
 export const servicesHub = {
   meta: {
-    title: 'Our Christmas Décor Services: Trees, Arches & Lights',
+    title: 'Christmas Decoration Services in Dubai & Sharjah',
     description:
       'Every Christmas décor service we offer in Dubai and Sharjah: trees, door arches, wreaths, lighting, stair garlands, table décor, figurines and removal.',
   } satisfies PageMeta,
   eyebrow: 'Services',
-  h1: 'Christmas decoration services',
+  h1: 'Christmas decoration services in Dubai',
   intro:
     'Ten services, one team. Each is supplied, delivered, installed and styled by Everpine in Dubai and Sharjah — book them as part of a package, or on their own.',
   sections: [

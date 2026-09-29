@@ -149,7 +149,7 @@ export const siteConfig = {
 } as const
 
 /** Date the site copy was last reviewed — used as sitemap lastmod. Update when content changes. */
-export const contentUpdated = '2026-09-26'
+export const contentUpdated = '2026-09-29'
 
 export function seasonMode(now = new Date()): SeasonMode {
   const m = siteConfig.season.mode

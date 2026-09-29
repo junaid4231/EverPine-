@@ -21,6 +21,8 @@ export function Header({ dict, locale }: { dict: Dictionary; locale: Locale }) {
     { href: lp('/faq'), label: n.faq },
   ]
   const secondary = [
+    { href: lp('/villa-christmas-decoration-dubai'), label: dict.ui.villaDubai },
+    { href: lp('/luxury-christmas-decoration-dubai'), label: dict.ui.luxuryDubai },
     { href: lp('/about'), label: n.about },
     { href: lp('/guides/christmas-tree-size-ceiling-height'), label: dict.ui.treeSizeGuide },
     { href: lp('/guides/office-christmas-decor-planning'), label: dict.ui.officeGuide },

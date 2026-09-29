@@ -16,20 +16,23 @@ import c from './CityView.module.css'
 
 /** Shared template for the Dubai and Sharjah pages — each with its own copy, areas, logistics and FAQs. */
 export function CityView({ page, dict, locale }: { page: CityPage; dict: Dictionary; locale: Locale }) {
-  const path = `/christmas-decoration-${page.area}`
+  const path = page.path ?? `/christmas-decoration-${page.area}`
   const areaName = dict.areas[page.area]
+  const crumb = page.crumb ?? dict.ui.christmasDecorationIn(areaName)
   const trail = [
     { name: dict.nav.home, path: '/' },
-    { name: dict.ui.christmasDecorationIn(areaName), path },
+    { name: crumb, path },
   ]
   const url = absoluteUrl(localePath(locale, path))
-  const message = dict.ui.cityMessage(areaName)
+  const message = page.message ?? dict.ui.cityMessage(areaName)
   const other = page.area === 'dubai' ? 'sharjah' : 'dubai'
+  const related = page.related ?? [{ href: `/christmas-decoration-${other}`, label: dict.ui.christmasDecorationIn(dict.areas[other]) }]
+  const key = page.ogKey ?? page.area
 
   return (
     <>
       <PageHero
-        accent={areaName}
+        accent={page.accent ?? areaName}
         dict={dict}
         locale={locale}
         trail={trail}
@@ -37,7 +40,7 @@ export function CityView({ page, dict, locale }: { page: CityPage; dict: Diction
         h1={page.h1}
         intro={page.intro}
         image={page.hero}
-        ctas={<ContactButtons dict={dict} locale={locale} placement={`city_${page.area}`} message={message} compact />}
+        ctas={<ContactButtons dict={dict} locale={locale} placement={`city_${key}`} message={message} compact />}
       />
 
       <section className="section">
@@ -100,28 +103,32 @@ export function CityView({ page, dict, locale }: { page: CityPage; dict: Diction
         </div>
       </section>
 
-      <section className="section theme-sand" aria-labelledby={`${page.area}-faq-heading`}>
+      <section className="section theme-sand" aria-labelledby={`${key}-faq-heading`}>
         <div className="container">
-          <Faqs faqs={page.faqs} locale={locale} heading={dict.ui.cityFaqHeading(areaName)} eyebrow={dict.ui.faq} id={`${page.area}-faq`} />
-          <p style={{ marginTop: 'var(--s-6)' }}>
-            <Link href={localePath(locale, `/christmas-decoration-${other}`)} className="link-arrow">
-              {dict.ui.christmasDecorationIn(dict.areas[other])}
-            </Link>
-          </p>
+          <Faqs faqs={page.faqs} locale={locale} heading={page.ogKey ? dict.ui.questionsAbout(crumb) : dict.ui.cityFaqHeading(areaName)} eyebrow={dict.ui.faq} id={`${key}-faq`} />
+          <ul role="list" className={c.related}>
+            {related.map((r) => (
+              <li key={r.href}>
+                <Link href={localePath(locale, r.href)} className="link-arrow">
+                  {r.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
-      <CtaBand dict={dict} locale={locale} placement={`city_${page.area}_closing`} message={message} />
+      <CtaBand dict={dict} locale={locale} placement={`city_${key}_closing`} message={message} />
 
       <JsonLd
         data={graph(
           serviceNode({
-            name: dict.ui.christmasDecorationIn(areaName),
-            serviceType: 'Christmas decoration installation',
+            name: crumb,
+            serviceType: page.serviceType ?? 'Christmas decoration installation',
             description: page.meta.description,
             url,
             areas: [page.area],
-            image: absoluteUrl(`/og/${locale}/${page.area}`),
+            image: absoluteUrl(`/og/${locale}/${key}`),
           }),
           faqNode(page.faqs, url),
           breadcrumbNode(locale, trail),

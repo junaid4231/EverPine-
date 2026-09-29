@@ -3,6 +3,7 @@ import { getContent } from '@/content'
 import { localePath, locales } from '@/lib/i18n'
 import { absoluteUrl } from '@/lib/seo'
 import { contentUpdated } from '@/lib/site-config'
+import { images, type ImageId } from '@/lib/images'
 
 /** Every indexable URL, with hreflang alternates ready for Arabic. */
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -15,6 +16,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/commercial-christmas-decor', priority: 0.85, freq: 'monthly' },
     { path: '/christmas-decoration-dubai', priority: 0.9, freq: 'monthly' },
     { path: '/christmas-decoration-sharjah', priority: 0.9, freq: 'monthly' },
+    { path: '/villa-christmas-decoration-dubai', priority: 0.9, freq: 'monthly' },
+    { path: '/luxury-christmas-decoration-dubai', priority: 0.85, freq: 'monthly' },
     { path: '/gallery', priority: 0.7, freq: 'monthly' },
     { path: `/guides/${p.guides.treeSize.slug}`, priority: 0.7, freq: 'yearly' },
     { path: `/guides/${p.guides.office.slug}`, priority: 0.7, freq: 'yearly' },
@@ -24,12 +27,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/privacy-policy', priority: 0.2, freq: 'yearly' },
   ]
   const lastModified = new Date(contentUpdated)
+  // Image sitemap for the gallery: every visible installation photo (helps Google Images for "christmas decoration ideas dubai").
+  const galleryImages = (Object.keys(d.images) as ImageId[])
+    .filter((id) => !d.images[id].galleryHidden && images[id])
+    .map((id) => absoluteUrl(images[id].src))
   return locales.flatMap((locale) =>
     entries.map((e) => ({
       url: absoluteUrl(localePath(locale, e.path)),
       lastModified,
       changeFrequency: e.freq,
       priority: e.priority,
+      ...(e.path === '/gallery' ? { images: galleryImages } : {}),
       alternates: {
         languages: {
           ...Object.fromEntries(locales.map((l) => [l, absoluteUrl(localePath(l, e.path))])),

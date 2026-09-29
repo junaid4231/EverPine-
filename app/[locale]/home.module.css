@@ -359,3 +359,16 @@
 @media (min-width: 64rem) {
   .reserveInner { grid-template-columns: auto 1fr auto; justify-items: start; text-align: left; gap: var(--s-5); }
 }
+
+/* ── Intro (who we are) ── */
+.introGrid { display: grid; gap: var(--s-7); }
+.introGrid h2 { margin: var(--s-3) 0 var(--s-5); max-width: 20ch; }
+.introP { max-width: 42rem; margin-top: var(--s-4); }
+.introP a { text-decoration: underline; text-underline-offset: 0.18em; }
+.introPoints { display: grid; gap: var(--s-5); margin: 0; align-content: start; }
+.introPoints div { border-top: 1px solid var(--rule); padding-top: var(--s-4); }
+.introPoints dt { font-family: var(--font-serif); font-size: 1.35rem; }
+.introPoints dd { margin: var(--s-2) 0 0; color: var(--muted); }
+@media (min-width: 64rem) {
+  .introGrid { grid-template-columns: 7fr 4fr; gap: var(--s-9); align-items: start; }
+}
