@@ -87,8 +87,8 @@ export const common: Common = {
         summary:
           'A 2.4 m tree for the living room and a finished entrance — door arch and wreath — so the house feels ready from the moment guests arrive.',
         idealFor: 'Apartments and homes with standard ceiling heights',
-        image: 'evergreen-door-arch-red-gold-baubles-wreath-white-door',
-        detailImage: 'red-gold-tree-poinsettias-faux-fur-skirt-living-room',
+        image: 'red-bauble-tree-candle-lights-entrance-garland',
+        detailImage: 'evergreen-door-arch-red-gold-baubles-wreath-white-door',
       },
       silver: {
         name: 'Silver',
@@ -97,8 +97,8 @@ export const common: Common = {
         summary:
           'A taller 2.7 m tree with gift boxes beneath, the entrance framed and wreathed, and the staircase garlanded — the whole route from front door to living room.',
         idealFor: 'Townhouses and villas with a staircase',
-        image: 'staircase-frosted-garland-red-gold-baubles-candles',
-        detailImage: 'frosted-tree-poinsettias-gift-boxes-pool-view',
+        image: 'frosted-tree-poinsettias-gift-boxes-pool-view',
+        detailImage: 'staircase-frosted-garland-red-gold-baubles-candles',
       },
       gold: {
         name: 'Gold',
@@ -107,8 +107,8 @@ export const common: Common = {
         summary:
           'A statement 3–3.6 m tree, entrance, staircase, dining table and figurines — plus house lighting, so the villa glows from the street when evening falls.',
         idealFor: 'Villas with double-height spaces and outdoor frontage',
-        image: 'villa-facade-icicle-lights-reindeer-dusk',
-        detailImage: 'onyx-counter-garland-runner-reindeer-figurines',
+        image: 'tall-bronze-champagne-tree-lounge-window',
+        detailImage: 'villa-facade-icicle-lights-reindeer-dusk',
       },
     },
     priceNote: 'Delivery, installation and styling included. Final quote confirmed on enquiry.',
@@ -230,10 +230,6 @@ export const common: Common = {
     plate: 'Plate',
     christmasDecorationIn: (area) => `Christmas decoration in ${area}`,
     cityFaqHeading: (area) => `Christmas décor in ${area}: questions`,
-    questionsAbout: (topic) => `${topic}: questions`,
-    christmasDecoratorsIn: (area) => `Christmas decorators in ${area}`,
-    villaDubai: 'Villa Christmas decoration, Dubai',
-    luxuryDubai: 'Luxury Christmas decoration, Dubai',
     cityMessage: (area) => `Hello Everpine, I’d like to plan Christmas décor in ${area}.`,
     custom: 'Custom',
     onQuote: 'On quote',
