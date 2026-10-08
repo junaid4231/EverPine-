@@ -67,7 +67,7 @@ export function Collection({ dict, locale, variant }: Props) {
               <li key={pkg.id} id={pkg.id} className={styles.item}>
                 <figure className={styles.figure}>
                   <div className={`${styles.frame} arch`}>
-                    <Img id={copy.image} dict={dict} fill sizes="(min-width: 64rem) 30vw, (min-width: 48rem) 40vw, 100vw" position="center 40%" />
+                    <Img id={copy.image} dict={dict} fill sizes="(min-width: 64rem) 30vw, (min-width: 48rem) 40vw, 100vw" position="center top" />
                   </div>
                   <figcaption className="plate">
                     <b>{dict.ui.plate}</b>

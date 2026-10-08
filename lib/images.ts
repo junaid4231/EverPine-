@@ -1,5 +1,8 @@
 /* Image registry — static imports give next/image intrinsic size + blur placeholder. */
 
+import packageBasicRedGoldTree from '@/assets/images/package-basic-red-gold-tree.jpg'
+import packageSilverFrostedTreeGiftBoxes from '@/assets/images/package-silver-frosted-tree-gift-boxes.jpg'
+import packageGoldBronzeChampagneTree from '@/assets/images/package-gold-bronze-champagne-tree.jpg'
 import archedEntranceEvergreenGarlandLargeRedBow from '@/assets/images/arched-entrance-evergreen-garland-large-red-bow.jpg'
 import blackDoorArchRedWhiteGoldBaublesLitReindeerNight from '@/assets/images/black-door-arch-red-white-gold-baubles-lit-reindeer-night.jpg'
 import bronzeCopperBaubleWallIlluminatedArch from '@/assets/images/bronze-copper-bauble-wall-illuminated-arch.jpg'
@@ -54,6 +57,9 @@ export const images = {
   'onyx-counter-garland-runner-reindeer-figurines': onyxCounterGarlandRunnerReindeerFigurines,
   'peppermint-candy-door-arch-wrought-iron-doors': peppermintCandyDoorArchWroughtIronDoors,
   'peppermint-tree-installation-protective-sheeting': peppermintTreeInstallationProtectiveSheeting,
+  'package-basic-red-gold-tree': packageBasicRedGoldTree,
+  'package-silver-frosted-tree-gift-boxes': packageSilverFrostedTreeGiftBoxes,
+  'package-gold-bronze-champagne-tree': packageGoldBronzeChampagneTree,
   'red-bauble-arch-shopfront-evening': redBaubleArchShopfrontEvening,
   'red-bauble-tree-candle-lights-entrance-garland': redBaubleTreeCandleLightsEntranceGarland,
   'red-gold-tree-poinsettias-faux-fur-skirt-living-room': redGoldTreePoinsettiasFauxFurSkirtLivingRoom,

@@ -199,4 +199,26 @@ export const images: Record<ImageId, ImageCopy> = {
     types: ['commercial'],
     palette: 'bronze-champagne',
   },
+  // Package card versions: cropped and graded so the whole tree sits under the arch. Not shown in the gallery.
+  'package-basic-red-gold-tree': {
+    alt: 'Christmas tree dressed in red and gold baubles and poinsettias with a burgundy bow topper and a white faux-fur skirt in a living room',
+    caption: 'Basic — a 2.4 m tree dressed in classic red and gold',
+    types: ['trees'],
+    palette: 'red-gold',
+    galleryHidden: true,
+  },
+  'package-silver-frosted-tree-gift-boxes': {
+    alt: 'Frosted Christmas tree with red and gold baubles and red poinsettias, gift boxes beneath, beside a window overlooking palms',
+    caption: 'Silver — a frosted tree with gift boxes beneath',
+    types: ['trees'],
+    palette: 'red-gold',
+    galleryHidden: true,
+  },
+  'package-gold-bronze-champagne-tree': {
+    alt: 'Tall Christmas tree with a star topper dressed in bronze and champagne baubles beside floor-to-ceiling windows in a lounge',
+    caption: 'Gold — a statement tree in bronze and champagne',
+    types: ['trees'],
+    palette: 'bronze-champagne',
+    galleryHidden: true,
+  },
 }

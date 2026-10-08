@@ -90,7 +90,7 @@
   .head { margin-bottom: var(--s-5); }
   .row { grid-auto-columns: 74%; gap: var(--s-3); }
   .card { padding: 8px 8px var(--s-4); }
-  .frame { aspect-ratio: 1 / 1.02; }
+  .frame { aspect-ratio: 5 / 6; }
   .top { margin-top: var(--s-4); }
   .name { font-size: clamp(1.75rem, 1.5rem + 1vw, 2.25rem); }
   .tagline {

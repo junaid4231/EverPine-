@@ -160,7 +160,7 @@
     background: linear-gradient(180deg, rgb(245 239 228 / 0.035), rgb(245 239 228 / 0.01));
   }
   .item:nth-child(3) { border-color: rgb(212 176 106 / 0.6); box-shadow: 0 0 60px -30px rgb(212 176 106 / 0.5); }
-  .frame { aspect-ratio: 1 / 0.82; }
+  .frame { aspect-ratio: 5 / 6; }
   .figure :global(.plate) { display: none; }
   .item > div:not(.scale) { padding: 0 var(--s-3); }
   .titleRow { margin-top: var(--s-4); gap: var(--s-3); }
