@@ -157,7 +157,7 @@ export const servicePages: ServicePage[] = [
         ],
       },
     ],
-    plates: ['frosted-tree-poinsettias-gift-boxes-pool-view', 'green-gold-tree-velvet-bow-neutral-living-room', 'tall-bronze-champagne-tree-lounge-window'],
+    plates: ['classic-green-tree-red-silver-baubles-apartment', 'tall-flocked-tree-burgundy-gold-baubles-lounge', 'champagne-gold-tree-star-topper-office-window'],
     inPackages: ['basic', 'silver', 'gold'],
     packageNote: 'A styled tree is the centre of every package — 2.4 m in Basic, 2.7 m in Silver and 3–3.6 m in Gold.',
     faqs: [
@@ -278,7 +278,7 @@ export const servicePages: ServicePage[] = [
     accent: 'wreaths',
     intro:
       'In the Gulf, the front door is where hospitality starts. A full garland arch and a wreath turn it into an invitation for villas, apartments and shopfronts across Dubai and Sharjah — and they’re part of every Everpine package.',
-    hero: 'black-door-arch-red-white-gold-baubles-lit-reindeer-night',
+    hero: 'wood-door-garland-arch-red-white-baubles-wreath',
     sections: [
       {
         heading: 'Arch styles',
@@ -367,7 +367,7 @@ export const servicePages: ServicePage[] = [
         ],
       },
     ],
-    plates: ['console-garland-silver-reindeer-oval-mirror', 'media-wall-garland-poinsettias-stockings', 'dining-centrepiece-installation-in-progress'],
+    plates: ['media-wall-garland-poinsettias-stockings', 'red-gold-tree-velvet-ribbons-gold-collar-villa', 'dining-centrepiece-installation-in-progress'],
     inPackages: ['silver', 'gold'],
     packageNote: 'Stair decoration is included in the Silver and Gold packages.',
     faqs: [
@@ -433,7 +433,7 @@ export const servicePages: ServicePage[] = [
         ],
       },
     ],
-    plates: ['table-runner-poinsettia-pinecones-marble-table', 'olive-tree-planter-baubles-nutcracker-reindeer', 'console-garland-silver-reindeer-oval-mirror'],
+    plates: ['table-runner-poinsettia-pinecones-marble-table', 'olive-tree-planter-baubles-nutcracker-reindeer', 'candy-cane-peppermint-tree-gingerbread-figures'],
     inPackages: ['gold'],
     packageNote: 'Table decoration and figurines are included in the Gold package, and can be added to any other package on request.',
     faqs: [

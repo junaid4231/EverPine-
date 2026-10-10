@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { WhatsAppIcon, PhoneIcon, MailIcon } from '@/components/Icons'
+import { WhatsAppIcon, PhoneIcon } from '@/components/Icons'
 import { formatPhone, siteConfig, telHref, whatsappHref } from '@/lib/site-config'
 import { localePath, type Locale } from '@/lib/i18n'
 import type { Dictionary } from '@/content/types'
@@ -23,7 +23,6 @@ interface Props {
 export function ContactButtons({ dict, locale, placement, message, compact, withQuote = true, light }: Props) {
   const wa = whatsappHref(message ?? dict.whatsappMessages.general)
   const tel = telHref()
-  const email = siteConfig.publicEmail
   const ghost = light ? 'btn btn-ghost' : 'btn btn-ghost'
 
   return (
@@ -43,12 +42,6 @@ export function ContactButtons({ dict, locale, placement, message, compact, with
         <a href={tel} className={ghost} data-track="call_click" data-track-label={placement}>
           <PhoneIcon />
           {compact ? dict.cta.call : formatPhone(siteConfig.phone)}
-        </a>
-      ) : null}
-      {email ? (
-        <a href={`mailto:${email}`} className={ghost} data-track="email_click" data-track-label={placement}>
-          <MailIcon />
-          {compact ? dict.cta.email : email}
         </a>
       ) : null}
     </>

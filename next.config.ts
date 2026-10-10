@@ -39,7 +39,7 @@ const nextConfig: NextConfig = {
   images: {
     // WebP only: AVIF encodes are slow on a cold optimiser cache and hurt first-visit LCP.
     formats: ['image/webp'],
-    qualities: [50, 60, 75, 85],
+    qualities: [50, 60, 75, 85, 90],
     deviceSizes: [390, 640, 750, 828, 1080, 1280, 1600, 1920],
     imageSizes: [96, 160, 256],
     minimumCacheTTL: 31536000,

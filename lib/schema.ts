@@ -33,10 +33,6 @@ export function graph(...nodes: Thing[]): Graph {
   return { '@context': 'https://schema.org', '@graph': nodes as Graph['@graph'] }
 }
 
-function catalogService(name: string, path: string): Service {
-  return { '@type': 'Service', name, url: absoluteUrl(path), provider: { '@id': BUSINESS_ID }, areaServed: siteConfig.areas.map((a) => areaNodes[a]) }
-}
-
 /** Service-area business: deliberately no address. */
 export function businessNode(dict: Dictionary): LocalBusiness {
   const prices = siteConfig.packages.map((p) => p.priceAED)
@@ -52,32 +48,9 @@ export function businessNode(dict: Dictionary): LocalBusiness {
     priceRange: `AED ${Math.min(...prices).toLocaleString('en')}–${Math.max(...prices).toLocaleString('en')}`,
     currenciesAccepted: 'AED',
     knowsLanguage: ['en'],
-    slogan: dict.site.tagline,
-    knowsAbout: [
-      'Christmas decoration',
-      'Christmas tree installation',
-      'Christmas lights installation',
-      'Villa Christmas decoration',
-      'Office Christmas decoration',
-      'Christmas door arches and wreaths',
-      'Post-Christmas decoration removal',
-    ],
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: 'Christmas decoration services',
-      itemListElement: [
-        ...dict.servicePages.map((s) => catalogService(s.name, `/services/${s.slug}`)),
-        ...[
-          ['Villa Christmas decoration in Dubai', '/villa-christmas-decoration-dubai'],
-          ['Luxury Christmas decoration in Dubai', '/luxury-christmas-decoration-dubai'],
-          ['Office & commercial Christmas decoration', '/commercial-christmas-decor'],
-        ].map(([name, path]) => catalogService(name!, path!)),
-      ],
-    },
   }
   if (siteConfig.legalName) node.legalName = siteConfig.legalName
   if (siteConfig.phone) node.telephone = siteConfig.phone
-  if (siteConfig.publicEmail) node.email = siteConfig.publicEmail
   if (siteConfig.socials.length) node.sameAs = siteConfig.socials.map((s) => s.url)
   return node
 }
@@ -88,6 +61,7 @@ export function websiteNode(locale: Locale): WebSite {
     '@id': WEBSITE_ID,
     url: siteUrl,
     name: siteConfig.name,
+    alternateName: ['Everpine', 'Everpine Events Dubai'],
     inLanguage: locale,
     publisher: { '@id': BUSINESS_ID },
   }

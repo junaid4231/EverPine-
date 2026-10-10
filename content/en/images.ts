@@ -200,25 +200,97 @@ export const images: Record<ImageId, ImageCopy> = {
     palette: 'bronze-champagne',
   },
   // Package card versions: cropped and graded so the whole tree sits under the arch. Not shown in the gallery.
-  'package-basic-red-gold-tree': {
-    alt: 'Christmas tree dressed in red and gold baubles and poinsettias with a burgundy bow topper and a white faux-fur skirt in a living room',
-    caption: 'Basic — a 2.4 m tree dressed in classic red and gold',
+  'package-basic': {
+    alt: 'Flocked Christmas tree in blue, teal, silver and white baubles in a living room',
+    caption: 'Basic — a flocked tree in blue, teal and silver',
+    types: ['trees'],
+    palette: 'frost-silver',
+    galleryHidden: true,
+  },
+  'package-silver': {
+    alt: 'Christmas tree with clusters of red baubles and candle-style lights beside a garlanded glass entrance',
+    caption: 'Silver — red baubles, candlelight and an entrance garland',
     types: ['trees'],
     palette: 'red-gold',
     galleryHidden: true,
   },
-  'package-silver-frosted-tree-gift-boxes': {
-    alt: 'Frosted Christmas tree with red and gold baubles and red poinsettias, gift boxes beneath, beside a window overlooking palms',
-    caption: 'Silver — a frosted tree with gift boxes beneath',
+  'package-gold': {
+    alt: 'Tall flocked Christmas tree with burgundy, red and gold baubles and velvet bows in a living room',
+    caption: 'Gold — a statement flocked tree in burgundy and gold',
     types: ['trees'],
     palette: 'red-gold',
     galleryHidden: true,
   },
-  'package-gold-bronze-champagne-tree': {
-    alt: 'Tall Christmas tree with a star topper dressed in bronze and champagne baubles beside floor-to-ceiling windows in a lounge',
-    caption: 'Gold — a statement tree in bronze and champagne',
+  'red-velvet-bow-tree-gold-baubles-gift-boxes': {
+    alt: 'Christmas tree dressed in deep red velvet ribbon, a large velvet bow, red baubles, eucalyptus and gold bells, with red velvet gift boxes at its base',
+    caption: 'Red velvet and gold, with a cascading bow',
+    types: ['trees'],
+    palette: 'red-gold',
+  },
+  'blue-silver-flocked-tree-fur-skirt-living-room': {
+    alt: 'Flocked Christmas tree in blue, teal, silver and white baubles with a fur skirt beside floor-to-ceiling windows',
+    caption: 'Blue, teal and silver on a flocked tree',
+    types: ['trees'],
+    palette: 'frost-silver',
+  },
+  'wood-door-garland-arch-red-white-baubles-wreath': {
+    alt: 'Timber front door framed by a full garland arch with red and white baubles, berries and a matching wreath',
+    caption: 'Door arch in red and white, with a matching wreath',
+    types: ['entrances'],
+    palette: 'red-gold',
+  },
+  'lit-flocked-tree-red-baubles-terrace-night': {
+    alt: 'Tall flocked tree glowing with warm lights and red baubles on a terrace at night with city towers behind',
+    caption: 'A flocked tree glowing on a terrace at night',
+    types: ['trees', 'commercial'],
+    palette: 'red-gold',
+  },
+  'classic-green-tree-red-silver-baubles-apartment': {
+    alt: 'Classic green Christmas tree with red, silver and white baubles and stars in an apartment living room',
+    caption: 'Classic green, red and silver',
+    types: ['trees'],
+    palette: 'red-gold',
+  },
+  'champagne-gold-tree-star-topper-office-window': {
+    alt: 'Flocked tree dressed in champagne and gold baubles with a large gold star topper in an office overlooking Dubai towers',
+    caption: 'Champagne and gold beneath a star, for an office',
+    types: ['trees', 'commercial'],
+    palette: 'bronze-champagne',
+  },
+  'candy-cane-peppermint-tree-gingerbread-figures': {
+    alt: 'Christmas tree dressed with candy canes, peppermint swirls, gingerbread figures and red and white ornaments',
+    caption: 'Candy canes, peppermints and gingerbread',
+    types: ['trees'],
+    palette: 'peppermint',
+  },
+  'red-gold-tree-velvet-ribbons-gold-collar-villa': {
+    alt: 'Tall Christmas tree with burgundy velvet ribbons and red and gold baubles in a gold tree collar in a villa living room',
+    caption: 'Burgundy ribbons and a gold collar',
+    types: ['trees'],
+    palette: 'red-gold',
+  },
+  'glass-entrance-garland-arch-red-bows-baubles': {
+    alt: 'Glass double doors framed by a garland arch with red velvet bows, berries and oversized red baubles',
+    caption: 'A glass entrance framed in garland and red bows',
+    types: ['entrances', 'commercial'],
+    palette: 'red-gold',
+  },
+  'arched-villa-entrance-garland-giant-red-bow': {
+    alt: 'Arched villa entrance framed by an evergreen garland with red and gold bauble clusters and a giant red velvet bow at the crown',
+    caption: 'An arched entrance crowned with a giant red bow',
+    types: ['entrances'],
+    palette: 'red-gold',
+  },
+  'gold-champagne-tree-star-picks-villa-lounge': {
+    alt: 'Christmas tree in gold and champagne with star ornaments and gold leaf picks in a villa lounge',
+    caption: 'Gold and champagne, with stars and leaf picks',
     types: ['trees'],
     palette: 'bronze-champagne',
-    galleryHidden: true,
+  },
+  'tall-flocked-tree-burgundy-gold-baubles-lounge': {
+    alt: 'Tall flocked Christmas tree with burgundy, red and gold baubles and velvet bows beside sheer curtains',
+    caption: 'A tall flocked tree in burgundy and gold',
+    types: ['trees'],
+    palette: 'red-gold',
   },
 }

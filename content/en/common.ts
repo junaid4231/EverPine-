@@ -87,7 +87,7 @@ export const common: Common = {
         summary:
           'A 2.4 m tree for the living room and a finished entrance — door arch and wreath — so the house feels ready from the moment guests arrive.',
         idealFor: 'Apartments and homes with standard ceiling heights',
-        image: 'package-basic-red-gold-tree',
+        image: 'package-basic',
         detailImage: 'evergreen-door-arch-red-gold-baubles-wreath-white-door',
       },
       silver: {
@@ -97,7 +97,7 @@ export const common: Common = {
         summary:
           'A taller 2.7 m tree with gift boxes beneath, the entrance framed and wreathed, and the staircase garlanded — the whole route from front door to living room.',
         idealFor: 'Townhouses and villas with a staircase',
-        image: 'package-silver-frosted-tree-gift-boxes',
+        image: 'package-silver',
         detailImage: 'staircase-frosted-garland-red-gold-baubles-candles',
       },
       gold: {
@@ -107,7 +107,7 @@ export const common: Common = {
         summary:
           'A statement 3–3.6 m tree, entrance, staircase, dining table and figurines — plus house lighting, so the villa glows from the street when evening falls.',
         idealFor: 'Villas with double-height spaces and outdoor frontage',
-        image: 'package-gold-bronze-champagne-tree',
+        image: 'package-gold',
         detailImage: 'villa-facade-icicle-lights-reindeer-dusk',
       },
     },
@@ -237,6 +237,11 @@ export const common: Common = {
     businessCtaHeading: 'Brief us early — the best dates go first.',
     businessService: 'Christmas décor for our business',
     galleryType: 'Type',
+    galleryOpen: 'View larger',
+    galleryClose: 'Close',
+    galleryPrev: 'Previous photo',
+    galleryNext: 'Next photo',
+    galleryZoom: 'Tap the photo to zoom',
     galleryPalette: 'Palette',
     galleryCtaHeading: 'Seen one you love? Send it to us.',
     faqSections: 'FAQ sections',

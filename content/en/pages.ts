@@ -84,7 +84,7 @@ export const home = {
     h1b: 'installed',
     h1c: 'for you in Dubai & Sharjah',
     sub: 'Trees, door arches, garlands, table styling and house lighting — supplied, delivered and styled in your villa, home or business.',
-    image: 'black-door-arch-red-white-gold-baubles-lit-reindeer-night' as ImageId,
+    image: 'red-velvet-bow-tree-gold-baubles-gift-boxes' as ImageId,
   },
   statement: {
     eyebrow: 'The Everpine way',
@@ -133,7 +133,7 @@ export const home = {
       'Christmas here isn’t snow on the windowsill. It’s doors open to guests, dinner that runs late, and a house that glows against a dusk-blue sky.',
       'So we design for that: entrances framed for arrivals, staircases and tables that carry the palette through marble and stone, and house lighting that comes into its own after sunset.',
     ],
-    images: ['black-door-arch-red-white-gold-baubles-lit-reindeer-night', 'onyx-counter-garland-runner-reindeer-figurines'] as ImageId[],
+    images: ['arched-villa-entrance-garland-giant-red-bow', 'onyx-counter-garland-runner-reindeer-figurines'] as ImageId[],
   },
   process: {
     eyebrow: 'How it works',
@@ -255,13 +255,13 @@ export const commercial = {
       id: 'offices',
       title: 'Offices',
       body: 'Reception is the first impression, so it gets the tree. Then the lift lobby, meeting rooms and pantry, in a palette that sits well with your brand. Tell us your working hours and we’ll agree an installation time around them.',
-      image: 'greenery-garland-glass-entrance-wreath' as ImageId,
+      image: 'champagne-gold-tree-star-topper-office-window' as ImageId,
     },
     {
       id: 'hotels',
       title: 'Hotels & hospitality',
       body: 'Tall lobby trees, framed entrances and lounge styling that photograph well — because guests will photograph them. We work to your property’s access and safety requirements.',
-      image: 'gold-lit-tree-red-bauble-base-atrium' as ImageId,
+      image: 'lit-flocked-tree-red-baubles-terrace-night' as ImageId,
     },
     {
       id: 'restaurants',
@@ -273,7 +273,7 @@ export const commercial = {
       id: 'retail',
       title: 'Retail',
       body: 'Entrances, windows and a tree inside the door. Lit décor keeps a frontage visible in the evening.',
-      image: 'red-bauble-arch-shopfront-evening' as ImageId,
+      image: 'glass-entrance-garland-arch-red-bows-baubles' as ImageId,
     },
   ],
   related:
@@ -330,7 +330,7 @@ export const cities: Record<'dubai' | 'sharjah', CityPage> = {
     h1: 'Christmas decoration in Dubai',
     intro:
       'From Palm Jumeirah villas to Downtown apartments and DIFC offices, we deliver, install and style Christmas across Dubai — tree, entrance, staircase, table and house lighting.',
-    hero: 'black-door-arch-red-white-gold-baubles-lit-reindeer-night',
+    hero: 'arched-villa-entrance-garland-giant-red-bow',
     sections: [
       {
         heading: 'Villas',
@@ -402,7 +402,7 @@ export const cities: Record<'dubai' | 'sharjah', CityPage> = {
         { pkg: 'custom', text: '**Offices, hotels and restaurants** — quoted individually.' },
       ],
     },
-    plates: ['villa-facade-icicle-lights-reindeer-dusk', 'frosted-tree-poinsettias-gift-boxes-pool-view', 'tall-bronze-champagne-tree-lounge-window'],
+    plates: ['villa-facade-icicle-lights-reindeer-dusk', 'gold-champagne-tree-star-picks-villa-lounge', 'red-gold-tree-velvet-ribbons-gold-collar-villa'],
     faqs: [
       {
         q: 'Do you cover all of Dubai?',

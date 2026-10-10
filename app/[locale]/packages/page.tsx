@@ -39,7 +39,7 @@ export default async function PackagesPage({ params }: Props) {
         eyebrow={pg.eyebrow}
         h1={pg.h1}
         intro={pg.intro}
-        image="staircase-frosted-garland-red-gold-baubles-candles"
+        image="red-gold-tree-velvet-ribbons-gold-collar-villa"
         ctas={<ContactButtons dict={dict} locale={locale} placement="packages_hero" compact />}
       />
 

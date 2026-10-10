@@ -35,11 +35,6 @@ export function Footer({ dict, locale }: { dict: Dictionary; locale: Locale }) {
                 {formatPhone(siteConfig.phone)}
               </a>
             ) : null}
-            {siteConfig.publicEmail ? (
-              <a href={`mailto:${siteConfig.publicEmail}`} className={styles.reachLink} data-track="email_click" data-track-label="footer">
-                {siteConfig.publicEmail}
-              </a>
-            ) : null}
           </div>
         </div>
 
@@ -57,9 +52,7 @@ export function Footer({ dict, locale }: { dict: Dictionary; locale: Locale }) {
           <nav className={styles.col} aria-label={f.areasHeading}>
             <h2>{f.areasHeading}</h2>
             <ul>
-              <li><Link href={lp('/christmas-decoration-dubai')}>{dict.ui.christmasDecoratorsIn(dict.areas.dubai)}</Link></li>
-              <li><Link href={lp('/villa-christmas-decoration-dubai')}>{dict.ui.villaDubai}</Link></li>
-              <li><Link href={lp('/luxury-christmas-decoration-dubai')}>{dict.ui.luxuryDubai}</Link></li>
+              <li><Link href={lp('/christmas-decoration-dubai')}>{dict.ui.christmasDecorationIn(dict.areas.dubai)}</Link></li>
               <li><Link href={lp('/christmas-decoration-sharjah')}>{dict.ui.christmasDecorationIn(dict.areas.sharjah)}</Link></li>
             </ul>
             <h2 className={styles.sub}>{dict.nav.guides}</h2>

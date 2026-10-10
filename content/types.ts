@@ -109,21 +109,6 @@ export interface CityPage {
   packageAdvice: { heading: string; items: { pkg: PackageId | 'custom'; text: RichText }[] }
   plates: ImageId[]
   faqs: Faq[]
-  /**
-   * Landing-page overrides. City pages (Dubai, Sharjah) leave these unset and live at
-   * /christmas-decoration-<area>; audience pages (villa, luxury) set their own path.
-   */
-  path?: string
-  /** Breadcrumb / schema name. Defaults to "Christmas decoration in <area>". */
-  crumb?: string
-  /** Phrase within h1 set in gold italic. Defaults to the area name. */
-  accent?: string
-  serviceType?: string
-  ogKey?: string
-  /** WhatsApp prefill. Defaults to the city message. */
-  message?: string
-  /** "Related" links shown under the FAQs. Defaults to the other city. */
-  related?: { href: string; label: string }[]
 }
 
 export interface GuideStep {
@@ -285,10 +270,6 @@ export interface UiCopy {
   plate: string
   christmasDecorationIn: (area: string) => string
   cityFaqHeading: (area: string) => string
-  questionsAbout: (topic: string) => string
-  christmasDecoratorsIn: (area: string) => string
-  villaDubai: string
-  luxuryDubai: string
   cityMessage: (area: string) => string
   custom: string
   onQuote: string
@@ -296,6 +277,11 @@ export interface UiCopy {
   businessCtaHeading: string
   businessService: string
   galleryType: string
+  galleryOpen: string
+  galleryClose: string
+  galleryPrev: string
+  galleryNext: string
+  galleryZoom: string
   galleryPalette: string
   galleryCtaHeading: string
   faqSections: string

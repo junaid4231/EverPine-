@@ -1,8 +1,20 @@
 /* Image registry — static imports give next/image intrinsic size + blur placeholder. */
 
-import packageBasicRedGoldTree from '@/assets/images/package-basic-red-gold-tree.jpg'
-import packageSilverFrostedTreeGiftBoxes from '@/assets/images/package-silver-frosted-tree-gift-boxes.jpg'
-import packageGoldBronzeChampagneTree from '@/assets/images/package-gold-bronze-champagne-tree.jpg'
+import packageBasicRedGoldTree from '@/assets/images/package-basic.jpg'
+import packageSilverFrostedTreeGiftBoxes from '@/assets/images/package-silver.jpg'
+import packageGoldBronzeChampagneTree from '@/assets/images/package-gold.jpg'
+import imgRedVelvetBowTreeGoldBaublesGiftBoxes from '@/assets/images/red-velvet-bow-tree-gold-baubles-gift-boxes.jpg'
+import imgBlueSilverFlockedTreeFurSkirtLivingRoom from '@/assets/images/blue-silver-flocked-tree-fur-skirt-living-room.jpg'
+import imgWoodDoorGarlandArchRedWhiteBaublesWreath from '@/assets/images/wood-door-garland-arch-red-white-baubles-wreath.jpg'
+import imgLitFlockedTreeRedBaublesTerraceNight from '@/assets/images/lit-flocked-tree-red-baubles-terrace-night.jpg'
+import imgClassicGreenTreeRedSilverBaublesApartment from '@/assets/images/classic-green-tree-red-silver-baubles-apartment.jpg'
+import imgChampagneGoldTreeStarTopperOfficeWindow from '@/assets/images/champagne-gold-tree-star-topper-office-window.jpg'
+import imgCandyCanePeppermintTreeGingerbreadFigures from '@/assets/images/candy-cane-peppermint-tree-gingerbread-figures.jpg'
+import imgRedGoldTreeVelvetRibbonsGoldCollarVilla from '@/assets/images/red-gold-tree-velvet-ribbons-gold-collar-villa.jpg'
+import imgGlassEntranceGarlandArchRedBowsBaubles from '@/assets/images/glass-entrance-garland-arch-red-bows-baubles.jpg'
+import imgArchedVillaEntranceGarlandGiantRedBow from '@/assets/images/arched-villa-entrance-garland-giant-red-bow.jpg'
+import imgGoldChampagneTreeStarPicksVillaLounge from '@/assets/images/gold-champagne-tree-star-picks-villa-lounge.jpg'
+import imgTallFlockedTreeBurgundyGoldBaublesLounge from '@/assets/images/tall-flocked-tree-burgundy-gold-baubles-lounge.jpg'
 import archedEntranceEvergreenGarlandLargeRedBow from '@/assets/images/arched-entrance-evergreen-garland-large-red-bow.jpg'
 import blackDoorArchRedWhiteGoldBaublesLitReindeerNight from '@/assets/images/black-door-arch-red-white-gold-baubles-lit-reindeer-night.jpg'
 import bronzeCopperBaubleWallIlluminatedArch from '@/assets/images/bronze-copper-bauble-wall-illuminated-arch.jpg'
@@ -57,9 +69,21 @@ export const images = {
   'onyx-counter-garland-runner-reindeer-figurines': onyxCounterGarlandRunnerReindeerFigurines,
   'peppermint-candy-door-arch-wrought-iron-doors': peppermintCandyDoorArchWroughtIronDoors,
   'peppermint-tree-installation-protective-sheeting': peppermintTreeInstallationProtectiveSheeting,
-  'package-basic-red-gold-tree': packageBasicRedGoldTree,
-  'package-silver-frosted-tree-gift-boxes': packageSilverFrostedTreeGiftBoxes,
-  'package-gold-bronze-champagne-tree': packageGoldBronzeChampagneTree,
+  'red-velvet-bow-tree-gold-baubles-gift-boxes': imgRedVelvetBowTreeGoldBaublesGiftBoxes,
+  'blue-silver-flocked-tree-fur-skirt-living-room': imgBlueSilverFlockedTreeFurSkirtLivingRoom,
+  'wood-door-garland-arch-red-white-baubles-wreath': imgWoodDoorGarlandArchRedWhiteBaublesWreath,
+  'lit-flocked-tree-red-baubles-terrace-night': imgLitFlockedTreeRedBaublesTerraceNight,
+  'classic-green-tree-red-silver-baubles-apartment': imgClassicGreenTreeRedSilverBaublesApartment,
+  'champagne-gold-tree-star-topper-office-window': imgChampagneGoldTreeStarTopperOfficeWindow,
+  'candy-cane-peppermint-tree-gingerbread-figures': imgCandyCanePeppermintTreeGingerbreadFigures,
+  'red-gold-tree-velvet-ribbons-gold-collar-villa': imgRedGoldTreeVelvetRibbonsGoldCollarVilla,
+  'glass-entrance-garland-arch-red-bows-baubles': imgGlassEntranceGarlandArchRedBowsBaubles,
+  'arched-villa-entrance-garland-giant-red-bow': imgArchedVillaEntranceGarlandGiantRedBow,
+  'gold-champagne-tree-star-picks-villa-lounge': imgGoldChampagneTreeStarPicksVillaLounge,
+  'tall-flocked-tree-burgundy-gold-baubles-lounge': imgTallFlockedTreeBurgundyGoldBaublesLounge,
+  'package-basic': packageBasicRedGoldTree,
+  'package-silver': packageSilverFrostedTreeGiftBoxes,
+  'package-gold': packageGoldBronzeChampagneTree,
   'red-bauble-arch-shopfront-evening': redBaubleArchShopfrontEvening,
   'red-bauble-tree-candle-lights-entrance-garland': redBaubleTreeCandleLightsEntranceGarland,
   'red-gold-tree-poinsettias-faux-fur-skirt-living-room': redGoldTreePoinsettiasFauxFurSkirtLivingRoom,
