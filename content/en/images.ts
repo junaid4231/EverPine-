@@ -128,8 +128,8 @@ export const images: Record<ImageId, ImageCopy> = {
     palette: 'red-gold',
   },
   'red-bauble-tree-candle-lights-entrance-garland': {
-    alt: 'Christmas tree with red baubles and candle-style lights beside a glass entrance garlanded with red baubles, white globes and berries',
-    caption: 'Candle-style lights and red baubles at an entrance',
+    alt: 'Christmas tree with clusters of red baubles and candle-style lights in a bright villa living room with garden views',
+    caption: 'Candle-style lights and red bauble clusters',
     types: ['trees', 'lighting'],
     palette: 'red-gold',
   },
@@ -208,9 +208,9 @@ export const images: Record<ImageId, ImageCopy> = {
     galleryHidden: true,
   },
   'package-silver': {
-    alt: 'Christmas tree with clusters of red baubles and candle-style lights beside a garlanded glass entrance',
-    caption: 'Silver — red baubles, candlelight and an entrance garland',
-    types: ['trees'],
+    alt: 'Fireplace mantel dressed with a full evergreen garland of pine cones, rose-gold and champagne baubles and a white poinsettia',
+    caption: 'Silver — a garlanded mantel in rose gold and champagne',
+    types: ['tables'],
     palette: 'red-gold',
     galleryHidden: true,
   },
@@ -290,6 +290,24 @@ export const images: Record<ImageId, ImageCopy> = {
   'tall-flocked-tree-burgundy-gold-baubles-lounge': {
     alt: 'Tall flocked Christmas tree with burgundy, red and gold baubles and velvet bows beside sheer curtains',
     caption: 'A tall flocked tree in burgundy and gold',
+    types: ['trees'],
+    palette: 'red-gold',
+  },
+  'champagne-gold-flocked-tree-gold-bows-wicker-basket': {
+    alt: 'Flocked Christmas tree dressed in champagne and gold baubles, satin bows and gold palm picks in a wicker basket',
+    caption: 'Champagne and gold, tied with satin bows',
+    types: ['trees'],
+    palette: 'bronze-champagne',
+  },
+  'modern-door-garland-frame-oversized-red-baubles': {
+    alt: 'Modern timber front door framed by a lush evergreen garland with berries and oversized red baubles',
+    caption: 'A modern door framed in greenery and red baubles',
+    types: ['entrances'],
+    palette: 'red-gold',
+  },
+  'flocked-tree-burgundy-velvet-bows-red-baubles-santa': {
+    alt: 'Flocked Christmas tree dressed in burgundy velvet bows and clusters of red baubles, with a Santa figure at its base beside a window',
+    caption: 'Burgundy velvet bows and red baubles on a flocked tree',
     types: ['trees'],
     palette: 'red-gold',
   },

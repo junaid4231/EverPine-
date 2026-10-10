@@ -133,7 +133,7 @@ export const home = {
       'Christmas here isn’t snow on the windowsill. It’s doors open to guests, dinner that runs late, and a house that glows against a dusk-blue sky.',
       'So we design for that: entrances framed for arrivals, staircases and tables that carry the palette through marble and stone, and house lighting that comes into its own after sunset.',
     ],
-    images: ['arched-villa-entrance-garland-giant-red-bow', 'onyx-counter-garland-runner-reindeer-figurines'] as ImageId[],
+    images: ['arched-villa-entrance-garland-giant-red-bow', 'modern-door-garland-frame-oversized-red-baubles'] as ImageId[],
   },
   process: {
     eyebrow: 'How it works',
@@ -143,7 +143,7 @@ export const home = {
       {
         title: 'Choose',
         body: 'Pick a package or tell us what you have in mind. Send your area, property type, a photo of the space and your preferred date.',
-        image: 'olive-tree-planter-baubles-nutcracker-reindeer' as ImageId,
+        image: 'champagne-gold-flocked-tree-gold-bows-wicker-basket' as ImageId,
       },
       {
         title: 'Confirm',

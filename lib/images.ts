@@ -15,6 +15,9 @@ import imgGlassEntranceGarlandArchRedBowsBaubles from '@/assets/images/glass-ent
 import imgArchedVillaEntranceGarlandGiantRedBow from '@/assets/images/arched-villa-entrance-garland-giant-red-bow.jpg'
 import imgGoldChampagneTreeStarPicksVillaLounge from '@/assets/images/gold-champagne-tree-star-picks-villa-lounge.jpg'
 import imgTallFlockedTreeBurgundyGoldBaublesLounge from '@/assets/images/tall-flocked-tree-burgundy-gold-baubles-lounge.jpg'
+import imgChampagneGoldFlockedTreeGoldBowsWickerBasket from '@/assets/images/champagne-gold-flocked-tree-gold-bows-wicker-basket.jpg'
+import imgModernDoorGarlandFrameOversizedRedBaubles from '@/assets/images/modern-door-garland-frame-oversized-red-baubles.jpg'
+import imgFlockedTreeBurgundyVelvetBowsRedBaublesSanta from '@/assets/images/flocked-tree-burgundy-velvet-bows-red-baubles-santa.jpg'
 import archedEntranceEvergreenGarlandLargeRedBow from '@/assets/images/arched-entrance-evergreen-garland-large-red-bow.jpg'
 import blackDoorArchRedWhiteGoldBaublesLitReindeerNight from '@/assets/images/black-door-arch-red-white-gold-baubles-lit-reindeer-night.jpg'
 import bronzeCopperBaubleWallIlluminatedArch from '@/assets/images/bronze-copper-bauble-wall-illuminated-arch.jpg'
@@ -81,6 +84,9 @@ export const images = {
   'arched-villa-entrance-garland-giant-red-bow': imgArchedVillaEntranceGarlandGiantRedBow,
   'gold-champagne-tree-star-picks-villa-lounge': imgGoldChampagneTreeStarPicksVillaLounge,
   'tall-flocked-tree-burgundy-gold-baubles-lounge': imgTallFlockedTreeBurgundyGoldBaublesLounge,
+  'champagne-gold-flocked-tree-gold-bows-wicker-basket': imgChampagneGoldFlockedTreeGoldBowsWickerBasket,
+  'modern-door-garland-frame-oversized-red-baubles': imgModernDoorGarlandFrameOversizedRedBaubles,
+  'flocked-tree-burgundy-velvet-bows-red-baubles-santa': imgFlockedTreeBurgundyVelvetBowsRedBaublesSanta,
   'package-basic': packageBasicRedGoldTree,
   'package-silver': packageSilverFrostedTreeGiftBoxes,
   'package-gold': packageGoldBronzeChampagneTree,
