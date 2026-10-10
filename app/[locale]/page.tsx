@@ -184,6 +184,31 @@ export default async function Home({ params }: Props) {
         </div>
       </section>
 
+      {/* ── Who we are: crawlable introduction linking every landing page ── */}
+      <section className={`section theme-ivory ${s.intro}`} aria-labelledby="intro-heading">
+        <div className={`container ${s.introGrid}`}>
+          <div>
+            <p className="eyebrow">{h.about.eyebrow}</p>
+            <h2 id="intro-heading" className="h2">
+              {h.about.heading}
+            </h2>
+            {h.about.body.map((p) => (
+              <p key={p.slice(0, 40)} className={s.introP}>
+                <Rich text={p} locale={locale} />
+              </p>
+            ))}
+          </div>
+          <dl className={s.introPoints}>
+            {h.about.points.map((pt) => (
+              <div key={pt.k}>
+                <dt>{pt.k}</dt>
+                <dd>{pt.v}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+
       {/* ── A Gulf Christmas ── */}
       <section className="section-lg lamplight" aria-labelledby="gulf-heading">
         <div className={`container ${s.gulf}`}>
@@ -263,7 +288,7 @@ export default async function Home({ params }: Props) {
       <section className="section theme-night" aria-labelledby="areas-heading">
         <div className="container">
           <p className="eyebrow">{h.areas.eyebrow}</p>
-          <h2 id="areas-heading" className="visually-hidden">
+          <h2 id="areas-heading" className="h2" style={{ marginTop: 'var(--s-3)' }}>
             {h.areas.heading}
           </h2>
           <p className="muted" style={{ marginTop: 'var(--s-4)', maxWidth: '40rem' }}>
