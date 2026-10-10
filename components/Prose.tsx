@@ -38,7 +38,7 @@ export function ProseRows({ sections, images = [], dict, locale }: { sections: S
             </div>
             {img ? (
               <figure className={styles.side}>
-                <div className={`${styles.frame} arch`} data-reveal="arch">
+                <div className={styles.frame} data-reveal>
                   <Img id={img} dict={dict} fill sizes="(min-width: 64rem) 30vw, 100vw" />
                 </div>
                 <figcaption className="plate">

@@ -10,7 +10,7 @@ export function Plates({ ids, dict, startAt = 1 }: { ids: ImageId[]; dict: Dicti
     <div className={`${styles.plates} ${styles[`count${count}` as keyof typeof styles] ?? ''}`}>
       {ids.map((id, i) => (
         <figure key={id} className={styles.plate}>
-          <div className={`${styles.frame} ${i % 3 === 0 ? 'arch' : ''}`} data-reveal={i % 3 === 0 ? 'arch' : ''} style={{ ['--d' as string]: i % 3 }}>
+          <div className={styles.frame} data-reveal style={{ ['--d' as string]: i % 3 }}>
             <Img id={id} dict={dict} fill sizes="(min-width: 64rem) 34vw, (min-width: 48rem) 60vw, 100vw" />
           </div>
           <figcaption className="plate">
