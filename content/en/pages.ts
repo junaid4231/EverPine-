@@ -510,10 +510,6 @@ export const cities: Record<'dubai' | 'sharjah', CityPage> = {
         q: 'Do you decorate offices in Dubai?',
         a: 'Yes — offices, hotels, restaurants and shops. Commercial projects are quoted individually. See [office Christmas decoration](/commercial-christmas-decor).',
       },
-      {
-        q: 'When should I book Christmas decorators in Dubai?',
-        a: 'As early as you can. Installation slots are limited each season, and dates closest to Christmas go first.',
-      },
     ],
     related: [
       { href: '/villa-christmas-decoration-dubai', label: 'Villa Christmas decoration in Dubai' },
