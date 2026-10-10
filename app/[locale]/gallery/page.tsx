@@ -18,12 +18,22 @@ import type { GalleryPalette, GalleryType } from '@/content/types'
 type Props = { params: Promise<{ locale: string }> }
 
 /** Curated order: strongest, most varied images first. */
+const HERO: ImageId = 'blue-silver-flocked-tree-fur-skirt-living-room'
+
 const ORDER: ImageId[] = [
+  'black-door-arch-red-white-gold-baubles-lit-reindeer-night',
+  'frosted-tree-poinsettias-gift-boxes-pool-view',
+  'bakery-shopfront-red-bauble-garland-arch-night',
   'red-velvet-bow-tree-gold-baubles-gift-boxes',
   'arched-villa-entrance-garland-giant-red-bow',
   'villa-balcony-red-bow-warm-string-lights-dusk',
   'tall-flocked-tree-burgundy-gold-baubles-lounge',
   'flocked-tree-burgundy-velvet-bows-red-baubles-santa',
+  'staircase-cream-gold-garland-bows-iron-balustrade',
+  'wood-door-red-rose-garland-arch-wreath',
+  'gingerbread-tree-red-bow-candy-canes-hallway',
+  'frosted-door-garland-champagne-baubles-wreath',
+  'santa-saxophone-figure-peppermint-tree-entrance',
   'wood-door-garland-arch-red-white-baubles-wreath',
   'champagne-gold-tree-star-topper-office-window',
   'staircase-frosted-garland-red-gold-baubles-candles',
@@ -32,6 +42,9 @@ const ORDER: ImageId[] = [
   'emerald-gold-bauble-arch-sunburst-door',
   'red-gold-tree-velvet-ribbons-gold-collar-villa',
   'onyx-counter-garland-runner-reindeer-figurines',
+  'vase-red-berry-stems-velvet-bow-gold-reindeer',
+  'media-wall-garland-red-bows-gold-baubles',
+  'tabletop-peppermint-tree-gingerbread-house-side-table',
   'glass-entrance-garland-arch-red-bows-baubles',
   'gold-champagne-tree-star-picks-villa-lounge',
   'champagne-gold-flocked-tree-gold-bows-wicker-basket',
@@ -82,7 +95,7 @@ export default async function Gallery({ params }: Props) {
     { name: dict.nav.home, path: '/' },
     { name: dict.nav.gallery, path: '/gallery' },
   ]
-  const ids = ORDER.filter((id) => !dict.images[id].galleryHidden)
+  const ids = ORDER.filter((id) => !dict.images[id].galleryHidden && id !== HERO)
   const usedTypes = new Set(ids.flatMap((id) => dict.images[id].types))
   const usedPalettes = new Set(ids.map((id) => dict.images[id].palette))
   const types = (Object.keys(dict.gallery.typeLabels) as GalleryType[]).filter((t) => usedTypes.has(t)).map((id) => ({ id, label: dict.gallery.typeLabels[id] }))
@@ -100,7 +113,7 @@ export default async function Gallery({ params }: Props) {
         eyebrow={g.eyebrow}
         h1={g.h1}
         intro={g.intro}
-        image="blue-silver-flocked-tree-fur-skirt-living-room"
+        image={HERO}
         ctas={<ContactButtons dict={dict} locale={locale} placement="gallery_hero" compact />}
       />
       <section className="section" style={{ paddingTop: 'var(--s-7)' }} id="gallery-grid">

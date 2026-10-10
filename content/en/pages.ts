@@ -117,7 +117,7 @@ export const home = {
     intro: 'Every installation is styled in one palette, carried from the front door to the dining table. Tap a palette to see it in a real Everpine installation.',
     legend: 'Palettes',
     items: [
-      { id: 'red-gold', name: 'Classic red & gold', swatches: ['#a3202a', '#d4b06a', '#1f4a36', '#f5efe4'], image: 'red-bauble-tree-candle-lights-entrance-garland', text: 'Lacquer-red baubles, gold accents, deep evergreen — the Christmas everyone remembers.' },
+      { id: 'red-gold', name: 'Classic red & gold', swatches: ['#a3202a', '#d4b06a', '#1f4a36', '#f5efe4'], image: 'red-gold-tree-velvet-ribbons-gold-collar-villa', text: 'Lacquer-red baubles, gold accents, deep evergreen — the Christmas everyone remembers.' },
       { id: 'frost-silver', name: 'Frost & silver', swatches: ['#eef2f5', '#b9c2cc', '#d9c79a', '#8e98a3'], image: 'flocked-lit-garland-arch-wood-door-frosted-wreath', text: 'Flocked branches, silver and champagne, lit warm so it glows rather than glitters.' },
       { id: 'emerald-gold', name: 'Emerald & gold', swatches: ['#155c3b', '#0e3b27', '#d4b06a', '#f0dca8'], image: 'emerald-gold-bauble-arch-sunburst-door', text: 'Deep green baubles layered with gold — rich against white stone and dark doors.' },
       { id: 'bronze-champagne', name: 'Bronze & champagne', swatches: ['#8a5a3c', '#c79a6b', '#e9d3b4', '#5b3a2a'], image: 'tall-bronze-champagne-tree-lounge-window', text: 'Warm metallics that sit beautifully with timber, travertine and hotel lounges.' },
@@ -289,7 +289,7 @@ export const commercial = {
       id: 'retail',
       title: 'Retail & shopfront Christmas décor',
       body: 'Entrances, windows and a tree inside the door. Lit décor keeps a frontage visible in the evening.',
-      image: 'glass-entrance-garland-arch-red-bows-baubles' as ImageId,
+      image: 'bakery-shopfront-red-bauble-garland-arch-night' as ImageId,
     },
   ],
   related:
@@ -574,7 +574,7 @@ export const cities: Record<'dubai' | 'sharjah', CityPage> = {
         { pkg: 'custom', text: '**Businesses and larger homes** — quoted individually.' },
       ],
     },
-    plates: ['evergreen-door-arch-red-gold-baubles-wreath-white-door', 'red-gold-tree-poinsettias-faux-fur-skirt-living-room', 'double-door-arch-red-bows-twin-wreaths-oversized-baubles'],
+    plates: ['wood-door-red-rose-garland-arch-wreath', 'red-gold-tree-poinsettias-faux-fur-skirt-living-room', 'double-door-arch-red-bows-twin-wreaths-oversized-baubles'],
     faqs: [
       {
         q: 'Do you install Christmas decorations in Sharjah?',
@@ -692,7 +692,7 @@ export const landings: Record<'villa' | 'luxury', CityPage> = {
         { pkg: 'custom', text: '**Larger villas and gardens** — more trees, more rooms, garden lighting; quoted individually.' },
       ],
     },
-    plates: ['villa-balcony-red-bow-warm-string-lights-dusk', 'double-door-arch-red-bows-twin-wreaths-oversized-baubles', 'red-gold-tree-poinsettias-faux-fur-skirt-living-room', 'staircase-frosted-garland-red-gold-baubles-candles', 'table-runner-poinsettia-pinecones-marble-table'],
+    plates: ['villa-balcony-red-bow-warm-string-lights-dusk', 'double-door-arch-red-bows-twin-wreaths-oversized-baubles', 'red-gold-tree-poinsettias-faux-fur-skirt-living-room', 'staircase-cream-gold-garland-bows-iron-balustrade', 'vase-red-berry-stems-velvet-bow-gold-reindeer'],
     faqs: [
       {
         q: 'How much does it cost to decorate a villa for Christmas in Dubai?',
@@ -798,7 +798,7 @@ export const landings: Record<'villa' | 'luxury', CityPage> = {
         { pkg: 'custom', text: '**Bespoke designs** — taller or additional trees, more rooms, gardens and terraces; quoted individually.' },
       ],
     },
-    plates: ['red-velvet-bow-tree-gold-baubles-gift-boxes', 'arched-villa-entrance-garland-giant-red-bow', 'gold-champagne-tree-star-picks-villa-lounge', 'onyx-counter-garland-runner-reindeer-figurines', 'emerald-gold-bauble-arch-sunburst-door'],
+    plates: ['red-velvet-bow-tree-gold-baubles-gift-boxes', 'arched-villa-entrance-garland-giant-red-bow', 'gold-champagne-tree-star-picks-villa-lounge', 'frosted-door-garland-champagne-baubles-wreath', 'emerald-gold-bauble-arch-sunburst-door'],
     faqs: [
       {
         q: 'How much does luxury Christmas decoration cost in Dubai?',

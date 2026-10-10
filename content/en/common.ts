@@ -98,7 +98,7 @@ export const common: Common = {
           'A taller 2.7 m tree with gift boxes beneath, the entrance framed and wreathed, and the staircase garlanded — the whole route from front door to living room.',
         idealFor: 'Townhouses and villas with a staircase',
         image: 'package-silver',
-        detailImage: 'staircase-frosted-garland-red-gold-baubles-candles',
+        detailImage: 'staircase-cream-gold-garland-bows-iron-balustrade',
       },
       gold: {
         name: 'Gold',

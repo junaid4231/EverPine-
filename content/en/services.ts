@@ -35,35 +35,35 @@ export const servicesIndex: ServiceIndexEntry[] = [
     name: 'Stair decoration',
     line: 'Garlands along the balustrade, clusters at the newel post, candlelight on the steps.',
     page: 'staircase-and-railing-decoration',
-    image: 'staircase-frosted-garland-red-gold-baubles-candles',
+    image: 'staircase-cream-gold-garland-bows-iron-balustrade',
   },
   {
     id: 'railings',
     name: 'Railing decoration',
     line: 'Balconies, mezzanines, mantels and media walls, garlanded to match the house.',
     page: 'staircase-and-railing-decoration',
-    image: 'media-wall-garland-poinsettias-stockings',
+    image: 'media-wall-garland-red-bows-gold-baubles',
   },
   {
     id: 'tables',
     name: 'Table decoration',
     line: 'Runners and centrepieces for dining tables, islands and entrance consoles.',
     page: 'table-decoration-vases-figurines',
-    image: 'table-runner-poinsettia-pinecones-marble-table',
+    image: 'tabletop-peppermint-tree-gingerbread-house-side-table',
   },
   {
     id: 'vases',
     name: 'Christmas-themed vases',
-    line: 'Vases and planters dressed for the season — even the olive tree joins in.',
+    line: 'Vases and planters dressed for the season — berry stems, velvet bows and gilded accents.',
     page: 'table-decoration-vases-figurines',
-    image: 'olive-tree-planter-baubles-nutcracker-reindeer',
+    image: 'vase-red-berry-stems-velvet-bow-gold-reindeer',
   },
   {
     id: 'figurines',
     name: 'Christmas figurines',
-    line: 'Reindeer, nutcrackers and seasonal figures, placed where they’ll be noticed.',
+    line: 'Santas, reindeer, nutcrackers and seasonal figures, placed where they’ll be noticed.',
     page: 'table-decoration-vases-figurines',
-    image: 'onyx-counter-garland-runner-reindeer-figurines',
+    image: 'santa-saxophone-figure-peppermint-tree-entrance',
   },
   {
     id: 'removal',
@@ -235,7 +235,7 @@ export const servicePages: ServicePage[] = [
         ],
       },
     ],
-    plates: ['villa-balcony-red-bow-warm-string-lights-dusk', 'lit-garland-arch-wood-door-cone-lights-evening', 'red-bauble-tree-candle-lights-entrance-garland'],
+    plates: ['villa-balcony-red-bow-warm-string-lights-dusk', 'black-door-arch-red-white-gold-baubles-lit-reindeer-night', 'red-bauble-tree-candle-lights-entrance-garland'],
     inPackages: ['gold'],
     packageNote: 'House lighting is included in the Gold package. Lighting can also be booked on its own, with or without other décor.',
     faqs: [
@@ -346,7 +346,7 @@ export const servicePages: ServicePage[] = [
     accent: 'Christmas decoration',
     intro:
       'The staircase is usually the tallest line in a villa, and the one guests see first. Dressed with garland, it carries the tree’s palette through the whole house.',
-    hero: 'staircase-frosted-garland-red-gold-baubles-candles',
+    hero: 'staircase-cream-gold-garland-bows-iron-balustrade',
     sections: [
       {
         heading: 'Staircases',
@@ -367,7 +367,7 @@ export const servicePages: ServicePage[] = [
         ],
       },
     ],
-    plates: ['media-wall-garland-poinsettias-stockings', 'red-gold-tree-velvet-ribbons-gold-collar-villa', 'dining-centrepiece-installation-in-progress'],
+    plates: ['media-wall-garland-red-bows-gold-baubles', 'red-gold-tree-velvet-ribbons-gold-collar-villa', 'dining-centrepiece-installation-in-progress'],
     inPackages: ['silver', 'gold'],
     packageNote: 'Stair decoration is included in the Silver and Gold packages.',
     faqs: [
@@ -405,8 +405,8 @@ export const servicePages: ServicePage[] = [
     h1: 'Christmas table decoration, vases & figurines',
     accent: 'figurines',
     intro:
-      'The details people notice up close: a runner along the dining table, reindeer on the kitchen island, an olive tree dressed for the season. For homes in Dubai and Sharjah, this is where a decorated house becomes a styled one.',
-    hero: 'onyx-counter-garland-runner-reindeer-figurines',
+      'The details people notice up close: a runner along the dining table, a vase of berry stems tied in velvet, a Santa by the door. For homes in Dubai and Sharjah, this is where a decorated house becomes a styled one.',
+    hero: 'tabletop-peppermint-tree-gingerbread-house-side-table',
     sections: [
       {
         heading: 'Runners and centrepieces',
@@ -433,7 +433,7 @@ export const servicePages: ServicePage[] = [
         ],
       },
     ],
-    plates: ['table-runner-poinsettia-pinecones-marble-table', 'olive-tree-planter-baubles-nutcracker-reindeer', 'candy-cane-peppermint-tree-gingerbread-figures'],
+    plates: ['vase-red-berry-stems-velvet-bow-gold-reindeer', 'santa-saxophone-figure-peppermint-tree-entrance', 'candy-cane-peppermint-tree-gingerbread-figures'],
     inPackages: ['gold'],
     packageNote: 'Table decoration and figurines are included in the Gold package, and can be added to any other package on request.',
     faqs: [

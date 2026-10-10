@@ -17,7 +17,16 @@ import imgGoldChampagneTreeStarPicksVillaLounge from '@/assets/images/gold-champ
 import imgTallFlockedTreeBurgundyGoldBaublesLounge from '@/assets/images/tall-flocked-tree-burgundy-gold-baubles-lounge.jpg'
 import imgChampagneGoldFlockedTreeGoldBowsWickerBasket from '@/assets/images/champagne-gold-flocked-tree-gold-bows-wicker-basket.jpg'
 import imgModernDoorGarlandFrameOversizedRedBaubles from '@/assets/images/modern-door-garland-frame-oversized-red-baubles.jpg'
+import imgBakeryShopfrontRedBaubleGarlandArchNight from '@/assets/images/bakery-shopfront-red-bauble-garland-arch-night.jpg'
 import imgFlockedTreeBurgundyVelvetBowsRedBaublesSanta from '@/assets/images/flocked-tree-burgundy-velvet-bows-red-baubles-santa.jpg'
+import imgStaircaseCreamGoldGarlandBowsIronBalustrade from '@/assets/images/staircase-cream-gold-garland-bows-iron-balustrade.jpg'
+import imgMediaWallGarlandRedBowsGoldBaubles from '@/assets/images/media-wall-garland-red-bows-gold-baubles.jpg'
+import imgVaseRedBerryStemsVelvetBowGoldReindeer from '@/assets/images/vase-red-berry-stems-velvet-bow-gold-reindeer.jpg'
+import imgTabletopPeppermintTreeGingerbreadHouseSideTable from '@/assets/images/tabletop-peppermint-tree-gingerbread-house-side-table.jpg'
+import imgSantaSaxophoneFigurePeppermintTreeEntrance from '@/assets/images/santa-saxophone-figure-peppermint-tree-entrance.jpg'
+import imgGingerbreadTreeRedBowCandyCanesHallway from '@/assets/images/gingerbread-tree-red-bow-candy-canes-hallway.jpg'
+import imgWoodDoorRedRoseGarlandArchWreath from '@/assets/images/wood-door-red-rose-garland-arch-wreath.jpg'
+import imgFrostedDoorGarlandChampagneBaublesWreath from '@/assets/images/frosted-door-garland-champagne-baubles-wreath.jpg'
 import archedEntranceEvergreenGarlandLargeRedBow from '@/assets/images/arched-entrance-evergreen-garland-large-red-bow.jpg'
 import blackDoorArchRedWhiteGoldBaublesLitReindeerNight from '@/assets/images/black-door-arch-red-white-gold-baubles-lit-reindeer-night.jpg'
 import bronzeCopperBaubleWallIlluminatedArch from '@/assets/images/bronze-copper-bauble-wall-illuminated-arch.jpg'
@@ -87,6 +96,15 @@ export const images = {
   'champagne-gold-flocked-tree-gold-bows-wicker-basket': imgChampagneGoldFlockedTreeGoldBowsWickerBasket,
   'modern-door-garland-frame-oversized-red-baubles': imgModernDoorGarlandFrameOversizedRedBaubles,
   'flocked-tree-burgundy-velvet-bows-red-baubles-santa': imgFlockedTreeBurgundyVelvetBowsRedBaublesSanta,
+  'bakery-shopfront-red-bauble-garland-arch-night': imgBakeryShopfrontRedBaubleGarlandArchNight,
+  'staircase-cream-gold-garland-bows-iron-balustrade': imgStaircaseCreamGoldGarlandBowsIronBalustrade,
+  'media-wall-garland-red-bows-gold-baubles': imgMediaWallGarlandRedBowsGoldBaubles,
+  'vase-red-berry-stems-velvet-bow-gold-reindeer': imgVaseRedBerryStemsVelvetBowGoldReindeer,
+  'tabletop-peppermint-tree-gingerbread-house-side-table': imgTabletopPeppermintTreeGingerbreadHouseSideTable,
+  'santa-saxophone-figure-peppermint-tree-entrance': imgSantaSaxophoneFigurePeppermintTreeEntrance,
+  'gingerbread-tree-red-bow-candy-canes-hallway': imgGingerbreadTreeRedBowCandyCanesHallway,
+  'wood-door-red-rose-garland-arch-wreath': imgWoodDoorRedRoseGarlandArchWreath,
+  'frosted-door-garland-champagne-baubles-wreath': imgFrostedDoorGarlandChampagneBaublesWreath,
   'package-basic': packageBasicRedGoldTree,
   'package-silver': packageSilverFrostedTreeGiftBoxes,
   'package-gold': packageGoldBronzeChampagneTree,

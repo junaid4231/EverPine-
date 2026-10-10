@@ -34,7 +34,7 @@ export default async function ServicesHub({ params }: Props) {
         eyebrow={h.eyebrow}
         h1={h.h1}
         intro={h.intro}
-        image="glass-entrance-garland-arch-red-bows-baubles"
+        image="frosted-tree-poinsettias-gift-boxes-pool-view"
         ctas={<ContactButtons dict={dict} locale={locale} placement="services_hero" compact />}
       />
       <section className="section">
