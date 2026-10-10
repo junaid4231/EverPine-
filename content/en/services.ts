@@ -204,7 +204,7 @@ export const servicePages: ServicePage[] = [
     accent: 'Christmas lights',
     intro:
       'Evenings are when a Gulf Christmas happens. We outline the house in warm light — rooflines, balconies, arches — so it glows from the street the moment the sun goes down.',
-    hero: 'villa-facade-icicle-lights-reindeer-dusk',
+    hero: 'lit-flocked-tree-red-baubles-terrace-night',
     sections: [
       {
         heading: 'House lighting',

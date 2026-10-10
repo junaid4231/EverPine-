@@ -265,7 +265,7 @@ export const commercial = {
   h1: 'Office Christmas decorators in Dubai and Sharjah',
   intro:
     'Your guests, clients and team notice Christmas before anything else. As office Christmas decorators, we design and install Christmas decoration for offices, hotels, restaurants and shops across Dubai and Sharjah — from DIFC and Business Bay to Al Majaz — striking from the entrance, practical around daily operations, and taken down when you need the space back.',
-  hero: 'tall-bronze-champagne-tree-lounge-window' as ImageId,
+  hero: 'spiral-red-peppermint-garland-tree-greenery' as ImageId,
   audiences: [
     {
       id: 'offices',
@@ -529,7 +529,7 @@ export const cities: Record<'dubai' | 'sharjah', CityPage> = {
     h1: 'Christmas decoration in Sharjah',
     intro:
       'The same full service we offer in Dubai, for homes across Sharjah: the tree delivered and styled, the front door framed, the staircase dressed and — for villas — the house lit for the evenings.',
-    hero: 'arched-entrance-evergreen-garland-large-red-bow',
+    hero: 'evergreen-door-arch-red-gold-baubles-wreath-white-door',
     sections: [
       {
         heading: 'Family villas and townhouses',
@@ -635,7 +635,7 @@ export const landings: Record<'villa' | 'luxury', CityPage> = {
     accent: 'Villa',
     intro:
       'A villa deserves more than a tree in the corner. We decorate the whole house — the entrance your guests arrive at, the hall, the staircase, the dining table and the façade after dark — in one palette, supplied, installed and styled by our team.',
-    hero: 'villa-facade-icicle-lights-reindeer-dusk',
+    hero: 'gold-champagne-tree-star-picks-villa-lounge',
     sections: [
       {
         heading: 'We plan the villa as one composition',
@@ -1064,7 +1064,7 @@ export const guides = {
     h1: 'What size Christmas tree fits your ceiling?',
     intro:
       'The most common Christmas décor mistake is a tree that’s the wrong height — too short and it looks lost, too tall and the topper bends against the ceiling. Here’s how to get it right.',
-    image: 'red-gold-tree-poinsettias-faux-fur-skirt-living-room' as ImageId,
+    image: 'classic-green-tree-red-silver-baubles-apartment' as ImageId,
     rule: {
       heading: 'The rule',
       body: 'Tree height = ceiling height − about 30 cm.',
@@ -1147,7 +1147,7 @@ export const guides = {
     h1: 'How to plan your office Christmas décor',
     intro:
       'Office Christmas décor is mostly a planning job. Get the zones, approvals and brief right, and installation is the easy part. This guide walks through it in the order you’ll need it — and if you’d rather hand it over, see our [office Christmas decoration in Dubai and Sharjah](/commercial-christmas-decor).',
-    image: 'spiral-red-bauble-garland-tree-plants-interior' as ImageId,
+    image: 'champagne-gold-tree-star-topper-office-window' as ImageId,
     steps: [
       {
         heading: '1. Start with the zones',

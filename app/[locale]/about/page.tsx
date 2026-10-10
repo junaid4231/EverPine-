@@ -33,7 +33,7 @@ export default async function About({ params }: Props) {
         eyebrow={a.eyebrow}
         h1={a.h1}
         intro={a.intro}
-        image="staircase-frosted-garland-red-gold-baubles-candles"
+        image="dining-centrepiece-installation-in-progress"
         ctas={<ContactButtons dict={dict} locale={locale} placement="about_hero" compact />}
       />
       <section className="section">

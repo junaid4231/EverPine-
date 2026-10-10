@@ -36,7 +36,7 @@ export default async function FaqPage({ params }: Props) {
         eyebrow={f.eyebrow}
         h1={f.h1}
         intro={f.intro}
-        image="olive-tree-planter-baubles-nutcracker-reindeer"
+        image="red-bauble-tree-candle-lights-entrance-garland"
         ctas={<ContactButtons dict={dict} locale={locale} placement="faq_hero" compact />}
       />
       <nav aria-label={dict.ui.faqSections} className="container" style={{ marginTop: 'var(--s-6)' }}>

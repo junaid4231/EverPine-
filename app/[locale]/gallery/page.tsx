@@ -97,7 +97,7 @@ export default async function Gallery({ params }: Props) {
         eyebrow={g.eyebrow}
         h1={g.h1}
         intro={g.intro}
-        image="double-door-arch-red-bows-twin-wreaths-oversized-baubles"
+        image="blue-silver-flocked-tree-fur-skirt-living-room"
         ctas={<ContactButtons dict={dict} locale={locale} placement="gallery_hero" compact />}
       />
       <section className="section" style={{ paddingTop: 'var(--s-7)' }} id="gallery-grid">
